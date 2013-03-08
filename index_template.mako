@@ -4,7 +4,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="stylesheet" href="../../css/itunes.css" type="text/css" />
+<link rel="stylesheet" href="../../css/default.css" type="text/css" />
 
 <style type='text/css'>
 span {
