@@ -20,11 +20,11 @@ tr a {
 	color: #000000;
 }
 tr:hover a {
-	color: #ffffff;
+	color: #336699;
 }
 tr:hover, tr.odd:hover {
-	background-color: #3d80df;
-	color: #ffffff;
+	background-color: #ffffff;
+	color: #000000;
 }
 input {
 	height: 45px;
