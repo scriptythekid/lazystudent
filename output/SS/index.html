@@ -1,0 +1,2045 @@
+
+<html>
+
+<head>
+<title>lazystudent - study and fail</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="../../css/lazystudent.css" type="text/css" />
+
+<style type='text/css'>
+span {
+  color:#FFFFFF;
+}
+</style>
+<!--
+<style type='text/css'>
+th, td {
+  padding: 3px !important;
+}
+
+
+/* Sortable tables */
+table.sortable thead {
+    background-color:#333;
+    color:#666666;
+    font-weight: bold;
+    cursor: default;
+}
+th {
+  font-size: 100%;
+}
+</style>
+-->
+
+<script src="../../js/sorttable.js"></script>
+
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+function highlight(container,what,spanClass) {
+    var content = container.innerHTML,
+        pattern = new RegExp('(>[^<.]*)(' + what + ')([^<.]*)','g'),
+        replaceWith = '$1<span ' + ( spanClass ? 'class="' + spanClass + '"' : '' ) + '">$2</span>$3',
+        highlighted = content.replace(pattern,replaceWith);
+    return (container.innerHTML = highlighted) !== content;
+}
+
+function filter2(phrase, _id){
+	var words = phrase.value.toLowerCase().split(" ");
+	var table = document.getElementById(_id);
+	var ele;
+	for (var r = 1; r < table.rows.length; r++){
+		ele = table.rows[r].innerHTML.replace(/<[^>]+>/g,"");
+	        var displayStyle = 'none';
+	        for (var i = 0; i < words.length; i++) {
+		    if (ele.toLowerCase().indexOf(words[i])>=0) {
+			displayStyle = '';
+			//highlight(ele,words[i],'myspan');
+		    } else {
+			displayStyle = 'none';
+			break;
+		    }
+	        }
+		table.rows[r].style.display = displayStyle;
+	}
+}
+
+
+
+/*
+var $rows = $('#table tr');
+$('#filt').keyup(function() {
+    var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+    
+    $rows.show().filter(function() {
+        var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+        return !~text.indexOf(val);
+    }).hide();
+});
+*/
+
+</script>
+
+<input id='filt' name='filt' onkeyup="filter2(this, 'table')" value="Search..."></br>
+
+<logos><img src="../../css/lazystudent.png" width="1039" height="229" alt="lazy"></logos>
+
+<table id='table' class='sortable CSSTableGenerator'>
+    <caption>lazystudent</caption>
+    
+	  
+  
+  <tr>
+  
+      <th>wstd</th>
+      <th>nachweis</th>
+      <th>ects</th>
+      <th>personlink</th>
+      <th>ort</th>
+      <th>semester</th>
+      <th>lvanr</th>
+      <th>lva_info</th>
+      <th>descr</th>
+      <th>lvatype</th>
+      <th>anmerkungen</th>
+      <th>has_DK</th>
+      <th>person</th>
+      <th>abschnitt</th>
+  
+  </tr>
+  
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> </td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?2777?14.03.13?&amp;147x43v2&amp; ">Clarke, Alison Jane Univ-.Prof. Dr.phil. PhD MA (RCA)</a></td>
+        <td class='ort'> Seminarraum Postgasse 6, 2. Stock, Termine nach Vereinbarung</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S20304</td>
+        <td class='lva_info'> DiplomandInnenseminar(2013S / 2 WStd. / 2 ECTS / Seminar / S20304)</td>
+        <td class='descr'> Material Culture</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Clarke, Alison Jane Univ-.Prof. Dr.phil. PhD MA (RCA)</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Wie in den vergangenen Semestern - wird bei Vorbesprechung am 14.03. bekanntgegeben.</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?298?14.03.13?&amp;14743umk&amp; ">Strouhal, Ernst ao. Univ.-Prof. Dr.phil.</a></td>
+        <td class='ort'> Backlist 20th Century: Raum, Zeit und Krise des Erz&auml;hlens 2Seminar: Do., 17.00 - 20.00 Uhr (Universit&auml;t f&uuml;r angewandte Kunst Wien, HS 3, Neubau, Erdgeschoss)Vorbesprechung: Do. 14. M&auml;rz, 17.00Termine: siehe unten</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S50789</td>
+        <td class='lva_info'> Backlist 20th Century 2 : Raum,  Zeit und Krise des Erzählens 2(2013S / 2 WStd. / 2 ECTS / Seminar / S50789)</td>
+        <td class='descr'> Wie im vorangegangenen Semestern werden wir im Sommersemester nach Aspekten des Narrativen im 20. Jahrhunderts entlang konkreter Texte fragen (Zeitstruktur, Perspektive und Stimme). Das genaue Programm wird wie stets bei der Vorbesprechung (14. 03.) festgelegt.Termine:14. 03. Vorbesprechung, Programm, Einleitung11. 04.Di. 23. 04 (Vortrag)25. 04.16. 05.06. 06.20. 06.</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> .</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Strouhal, Ernst ao. Univ.-Prof. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> m&uuml;ndliche und schriftliche Arbeit (Abgabe bis 15. August 2013)</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?108?14.03.13?&amp;14u7432v&amp; ">Hammer-Tugendhat, Daniela Hon.Prof. Dr.phil.</a></td>
+        <td class='ort'> Abhaltung:&nbsp;w&ouml;chentlichTermin:&nbsp;Montag, 13-14:30 UhrBeginn:&nbsp;Montag, 11. M&auml;rz 2013, 13-14:30 Uhr, H&ouml;rsaal&nbsp;4 (Altbau, 1. Stock)Ort:&nbsp;Kunsthistorisches Museum, Treffpunkt: Nebeneingang am Ring</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S51090</td>
+        <td class='lva_info'> Bildergespräche im Museum (KHM)(2013S / 2 WStd. / 2 ECTS / Proseminar / S51090)</td>
+        <td class='descr'> Das Proseminar soll es Studierenden erm&ouml;glichen, sich in einer intensiven monographischen Arbeit an einem selbstgew&auml;hlten Gem&auml;lde/einer Skulptur im KHM mit dem k&uuml;nstlerischen Original zu befassen. Es geht um eine bewusste Verlangsamung des Blicks auf jeweils ein Objekt, das in seiner Komplexit&auml;t m&ouml;glichst umfassend untersucht werden soll: von Fragen der Technik und des Erhaltungszustands &uuml;ber ikonographische Untersuchungen bis zu weitreichenden Fragen nach seiner Bedeutung, Funktion und Wirkung. Die Chance am Original arbeiten zu k&ouml;nnen soll auch daf&uuml;r genutzt werden, Interpretationen aus der &auml;sthetischen Struktur des Werkes selbst abzuleiten und verarbeitete Forschungsliteratur eigenst&auml;ndig auf das Objekt zu beziehen bzw. deren Stichhaltigkeit daran zu &uuml;berpr&uuml;fen. Die Studierenden sind aufgefordert, ihre Schwerpunkte selbst zu setzen. Subjektive Zug&auml;nge zur Kunst sollen mit wissenschaftlichen und historisch orientierten in Verbindung gebracht werden.</td>
+        <td class='lvatype'> Proseminar</td>
+        <td class='anmerkungen'> Anmeldung:via Mail ansabine.eder@uni-ak.ac.at</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Hammer-Tugendhat, Daniela Hon.Prof. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Die Pr&uuml;fungsarbeiten werden ausschlie&szlig;lich in elektronischer Form entgegengenommen. Bitte geben Sie IhrenNamen, Matrikelnummer und das zutreffende Semesteran - danke.</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?5387?14.03.13?&amp;Sb1W47U4&amp; ">Pfaller, Robert Univ.Prof. Dr.phil.habil.</a></td>
+        <td class='ort'> Ort: 1010 Wien, Expositur Postgasse 6, 2. Stock im SeminarraumErste Lehrveranstaltung:Donnerstag, 07.03.201, 17 UhrTermine werden in Absprache mit den k&uuml;nstlerischen Initiativen festgelegt.</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S50936</td>
+        <td class='lva_info'> Projektorientierte Forschung(2013S / 2 WStd. / 2 ECTS / Übungen / S50936)</td>
+        <td class='descr'> Die Lehrveranstaltung dient zur transdisziplin&auml;ren Unterst&uuml;tzung aktueller k&uuml;nstlerischer Vorhaben:z. B. Kl&auml;rung des k&uuml;nstlerischen Konzepts; Kl&auml;rung des wissenschaftlichen Recherchebedarfs und der entsprechenden Verfahren; Reflexion des Projekts etc.Sowohl individuelle Projekte als auch kollektive Vorhaben (z. B. Abteilungsprojekte oder freie studentische Initiativen) k&ouml;nnen eingebracht werden.</td>
+        <td class='lvatype'> Übungen</td>
+        <td class='anmerkungen'> Es wird dringend gebeten, Anmeldungen unterIrene.Gerersdorfer@uni-ak.ac.atper Mail abzugeben.Die erstellte Adressenliste dient zur Verst&auml;ndigung, wenn eine Lehrveranstaltung ausf&auml;llt, zur Zusendung von&nbsp;Skripten und Materialien f&uuml;r Lehrveranstaltungen und zur Bekanntgabe&nbsp;sonstiger Informationen. Bitte geben Sie Ihren Vor- und Zunamen, Studienrichtung und die&nbsp;Matrikelnummer an -&nbsp;danke.</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Pfaller, Robert Univ.Prof. Dr.phil.habil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 1</td>
+        <td class='nachweis'> Erstellen einer physischen Partitur und deren Transformation;</td>
+        <td class='ects'> 1</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?6347?14.03.13?&amp;W1R474a3&amp; ">Rauter, Ulla Univ.-Lekt. Mag.art.</a></td>
+        <td class='ort'> Vorbesprechung: 19. M&auml;rz 2013, 10 Uhr</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00350</td>
+        <td class='lva_info'> Mutationen zeitbasierter Systeme im Raum II(2013S / 1 WStd. / 1 ECTS / Seminar / S00350)</td>
+        <td class='descr'> Die physische Welt als Partitur und der K&ouml;rper als SchnittstelleDer Workshop greift physische Ph&auml;nomene und Prozesse als Ausgangsmaterialund Partitur f&uuml;r die k&uuml;nstlerische Arbeit auf.Signale aus dem K&ouml;rperinneren, Stimme, Haut etc. k&ouml;nnen als Skalen in andereMedien transferiert werden und neue Aussagen und Fragestellungen evozieren.Die physische Welt wird angezapft und zur Sprache gebracht.&nbsp;Im Workshop werden verschiedene Verfahren der Transformation und des Sicht-und H&ouml;rbarmachens gezeigt.Kenntnisse in Pure Data &amp; Arduino (Pduino) sind von Vorteil, aber nicht Voraussetzung.&nbsp;Es gibt am24. Aprildie M&ouml;glichkeit, am Institut f&uuml;r Neurofeedback ein EEG zu machen -als Inspiration, Diskussions- und Ausgangsmaterial.Da die Anzahl aus Platzgr&uuml;nden beschr&auml;nkt ist, bitte um Voranmeldung unter: ullarauter@gmx.at&nbsp;&nbsp;</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Rauter, Ulla Univ.-Lekt. Mag.art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?132?14.03.13?&amp;K1474TGe&amp; ">Huber, Michael VL Mag. art.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S30237</td>
+        <td class='lva_info'> Medienkonvergenz und -hybridisierung IV(2013S / 2 WStd. / 2 ECTS / Seminar / S30237)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Huber, Michael VL Mag. art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> m&uuml;ndliche und schriftliche Arbeit (Abgabe bis 15. August 2013)</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?6123?14.03.13?&amp;1474Gw3E&amp; ">Kernbauer, Eva Univ.-Prof. Mag.phil. Dr.phil.</a></td>
+        <td class='ort'> Abhaltung:&nbsp;geblocktTermin:Donnerstag, 10-13 UhrBeginn:Donnerstag, 7. M&auml;rz 2013, 10-11:30 Uhr, H&ouml;rsaal 4 (Altbau, 1. Stock)Ort:H&ouml;rsaal 4 bzw. MUMOK&nbsp;Die Lehrveranstaltung findet an den folgenden Terminen statt:&nbsp;Donnerstag, 07. M&auml;rz 2013, 10:00-11:30, HS 4Donnerstag, 21. M&auml;rz 2013, 10:00-13:00, MUMOKDonnerstag, 11. April 2013, 10:00-13:00, HS 4Donnerstag, 25. April 2013, 10:00-13:00, HS 4Donnerstag, 02. Mai 2013, 10:00-13:00, HS 4Donnerstag, 06. Juni 2013, 10:00-13:00, HS 4Donnerstag, 13. Juni 2013, 10:00-13:00, HS 4</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00301</td>
+        <td class='lva_info'> Skulptur und Installation in der Gegenwartskunst(2013S / 2 WStd. / 2 ECTS / Proseminar / S00301)</td>
+        <td class='descr'> Die Installation ist in der Gegenwartskunst zu einer weit verbreiteten Erscheinungsform geworden, die unterschiedliche Materialien, Medien und Formate umfasst: Massenhafte Ansammlungen von Dingen k&ouml;nnen ebenso dazu z&auml;hlen wie b&uuml;hnenhafte Inszenierungen und raumgreifende Licht- und Filmprojektionen. Der Allgegenwart der Installation stehen tief greifende Auffassungsunterschiede &uuml;ber ihre Definition gegen&uuml;ber. W&auml;hrend Versuche zur Erstellung einer Gattungsgenealogie die Anf&auml;nge der Installation in den Environments der 1950er und 1960er Jahre oder in der Minimal Art zu verorten suchen, gehen andere Ans&auml;tze von einem umfassenderem Verst&auml;ndnis von Installation als k&uuml;nstlerischer Haltung aus, die einem isolierenden Werkbegriff ein raumbezogenes Verst&auml;ndnis von Kunst entgegensetzt. In diesem Verst&auml;ndnis ist die Installation als Teil jeglicher k&uuml;nstlerischen Arbeit zu verstehen, der mit der Entwicklung der Ausstellung zusammenzudenken ist.Eine besondere Reibungsfl&auml;che bietet die k&uuml;nstlerische und theoretische Auseinandersetzung mit der Skulptur als k&uuml;nstlerischer Werkform, deren &Uuml;berwindung ein h&auml;ufiges Ziel installativer Ans&auml;tze war. Im Zentrum der Lehrveranstaltung steht daher das ergiebige Wechselspiel zwischen skulpturalen und installativen Aspekten in der Gegenwartskunst.Neben einem &Uuml;berblick &uuml;ber die verschiedenen (inter)medialen Auspr&auml;gungsformen zeitgen&ouml;ssischer Installationskunst wird das Seminar auch die kunsttheoretische Diskussion behandeln. Die Lehrveranstaltung zielt darauf ab, das komplexe Verh&auml;ltnis bildhafter, skulpturaler und raumbezogener Aspekte in der Installationskunst in Auseinandersetzung mit dem modernistischen Gattungsbegriff zug&auml;nglich machen.Literaturempfehlungen&nbsp;(siehe auch Handapparat in der Bibliothek):George Baker, &bdquo;Minima Memoria. Reflexionen &uuml;ber die besch&auml;digte Skulptur&ldquo;, in: Sharawdgi, Hg. Christian Meyer/Mathias Poledna, Baden: Felsenvilla, K&ouml;ln: K&ouml;nig, 1998, S. 103-120.Claire Bishop,&nbsp;Installation Art. A Critical History, London: Tate, 2005.Georges Didi-Huberman,&nbsp;Was wir sehen blickt uns an. Zur Metapsychologie des Bildes, M&uuml;nchen: Fink, 1999.Anne Ellegood und Beatrix Ruf,&nbsp;Vitamin 3-D. New Perspectives in Sculpture and Installation, Berlin: Phaidon, 2009.Briony Fer, &ldquo;The Somnambulist's Story: Installation and the Tableau&rdquo;, in:&nbsp;Oxford Art Journal,&nbsp;24/2, 2001, S. 75-92.Michael Fried, &ldquo;Art and Objecthood&rdquo;, in: ders.,&nbsp;Art and Objecthood. Essays and reviews, Chicago: University of Chicago Press, 1998, 148-172.Ursula Frohne,&nbsp;Kinematographische R&auml;ume, Installations&auml;sthetik in Film und Kunst, M&uuml;nchen: Fink, 2012.Gertrud Koch und Robin Curtis,&nbsp;Umwidmungen. Architektonische und kinematographische R&auml;ume, Berlin: Vorwerk 8, 2005.Rosalind Krauss,&nbsp;&ldquo;A voyage on the North Sea". Art in the age of the post-medium condition, New York: Thames and Hudson, 2000.Rosalind Krauss, &ldquo;Sculpture in the Expanded Field&rdquo;, in:&nbsp;October, 8, Spring 1979, S. 30-44.James Meyer,&nbsp;Minimalism: Art and Polemics an the Sixties, New Haven and London: Yale University Pres, 2001.Brian O&rsquo;Doherty,&nbsp;Inside the White Cube. The Ideology of the Gallery Space, Santa Monica/San Francisco: The Lapis Press, 1986 (dt..:&nbsp;In der wei&szlig;en Zelle, Hg. Wolfgang Kemp, Berlin: Merve, 1996.)Nicolas de Oliveira (Hg.),&nbsp;Installation Art, Washington: Smithsonian Institution, 1994.Alex Potts,&nbsp;The sculptural imagination. Figurative, modernist, minimalist, New Haven (Conn.): Yale University Press, 2000.Alex Potts, &ldquo;Installation and Sculpture&rdquo;, in:&nbsp;Oxford Art Journal,&nbsp;24/2, 2001, S. 5-24.Juliane Rebentisch,&nbsp;&Auml;sthetik der Installation, Frankfurt am Main: Suhrkamp, 2003.Erika Suderburg,&nbsp;Space, Site, Intervention: Situating Installation Art, Minneapolis: Univ. of Minnesota Press, 2000.</td>
+        <td class='lvatype'> Proseminar</td>
+        <td class='anmerkungen'> Teilnahmevoraussetzungen:Regelm&auml;&szlig;ige Anwesenheit (maximales Fehlen: 2 Einzelsitzungen oder 1 Doppelsitzung), &Uuml;bernahme eines Referats und Abgabe der schriftlichen Arbeit, und die Bereitschaft zu Lekt&uuml;re und Diskussion sind Voraussetzung zur erfolgreichen Teilnahme.Keine Voranmeldung n&ouml;tig. In der ersten Seminarstunde werden die Referatsthemen vergeben und der Ablauf des Seminars vorgestellt.</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Kernbauer, Eva Univ.-Prof. Mag.phil. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Seminararbeit</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?298?14.03.13?&amp;1HFJ4NPR&amp; ">Strouhal, Ernst ao. Univ.-Prof. Dr.phil.</a></td>
+        <td class='ort'> &Auml;sthetik und Politik 2: Spiele der StadtSeminar:H&ouml;rsaal 3 (Neuer Trakt, Erdgeschoss), Di. 17.00 - 20.00Vorbesprechung:Di. 12. M&auml;rz, 17.00, HS 3Termine: siehe unten</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00174</td>
+        <td class='lva_info'> Ästhetik und Politik 2: Spiele der Stadt(2013S / 2 WStd. / 2 ECTS / Seminar / S00174)</td>
+        <td class='descr'> Gegenstand des Seminars ist im Sommersemester neben dem Verh&auml;ltnis von Stadt und Spiel vor allem das Verh&auml;ltnis von Spiel und Krieg in Gesellschafts- und Computerspielen. Wie ver&auml;ndern sich St&auml;dte und die Spiele, wie wird die Vorstellung von asymmetrischem und symmetrischem Krieg in der Welt der Spiele repr&auml;sentiert?Einen ersten inhaltlichen Impuls vor Ostern bilden die Veranstaltungen im Rahmen des Projektes &bdquo;Play and Prosume&ldquo; im Projectspace am Karlsplatz ab. 11. 3. (M. Jahrmann, B. Felderer), im Besonderen das spielhistorische Symposion am So. 17. 3, sowie die F&uuml;hrung durch die Ausstelung &bdquo;Spiele der Stadt&ldquo; am Di. 19. 3. mit anschlie&szlig;ender Diskussion.Termine und vorl&auml;ufiges Programm:Di. 12. 03., 17.00:&nbsp; HS 3 (Vorbesprechung)So. 17. 03., 10.00 &ndash; 16.00: Symposion &bdquo;Spiel und Krieg&ldquo; (Project Space Karlsplatz)Di. 19. 03., 17.00: Ausstellung &bdquo;Spiele der Stadt&ldquo; &nbsp;(Wien Museum Karlsplatz, Schwerpunkt Spiel und Propaganda)Di. 09. 04., 17.00: HS 3Di. 23. 04., 17.00: HS 3Di. 07. 05., 17.00: HS 3Di. 27. 05., 17.00: HS 3</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> gem. mit ao. Univ-Prof. Roman Horak.</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Strouhal, Ernst ao. Univ.-Prof. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 1</td>
+        <td class='nachweis'> werden in der ersten LV bekannt gegeben</td>
+        <td class='ects'> 1</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?4762?14.03.13?&amp;jr1h4743&amp; ">Noever, Anna Ixy Univ.-Lekt. Mag.phil.</a></td>
+        <td class='ort'> &nbsp;Mi. 10.04.2013 - 09:00 bis 13:30 | H&ouml;rsaal 2Mo. 06.05.2013 - 09:00 bis 13:30 | H&ouml;rsaal 1Mo. 13.05.2013 - 09:00 bis 13:30 | H&ouml;rsaal 1Mi.&nbsp; 15.05.2013 - 09:00 bis 14:00 | H&ouml;rsaal 2Mo. 03.06.2013 - 09:00 bis 13:30 | H&ouml;rsaal 1</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00198</td>
+        <td class='lva_info'> Autobiografie, Kunst und Film(2013S / 1 WStd. / 1 ECTS / Übungen / S00198)</td>
+        <td class='descr'> Sowohl in der Kunst- als auch in der Filmwelt flie&szlig;t die Autobiographie des K&uuml;nstlers oder Filmemachers in irgendeiner Form&nbsp;stets in das Kunstwerk ein. Die Lehrveranstaltung setzt sich nun mit Autobiographien, seien sie verborgen oder direkt sichtbar auseinander, und versucht einen Zusammenhang zwischen dem Kunstwerk und den Autobiographien der K&uuml;nstlerInnen transparent werden zu lassen. Schwerpunkt werden Filmbetrachtungen sein, ihre k&uuml;nstlerischen Umsetzungen sowie die verschiedenen filmischen Darstellungen von Autobiographien. Dieser Thematik wird an Hand von Filmbeispielen, Impulsreferaten, Filmanalysen, Gruppenarbeiten und Diskussionen nachgegangen werden.</td>
+        <td class='lvatype'> Übungen</td>
+        <td class='anmerkungen'> Wir bitten alle, die an dieser LV teilnehmen wollen,sich per email Anna-ixy@gmx.at anzumelden!Wir ersuchen alle um eine kontinuierliche Anwesenheit in der LV!!!Wer zu einem der Termine nicht kommen kann, bitte uns dies vorher per a mail bekannt zu geben!!!Wir freuen uns auf Ihr Kommen und auf eine spannende gemeinsame Arbeit! :-)</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Noever, Anna Ixy Univ.-Lekt. Mag.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 4</td>
+        <td class='nachweis'> Konzeption und Pr&auml;sentation einer in der Lehrveranstaltung entstandenen k&uuml;nstlerischen Arbeit.</td>
+        <td class='ects'> 4</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?302?14.03.13?&amp;147xtzn4&amp; ">Sunkovsky, Beatrix AProf. Mag.art.</a></td>
+        <td class='ort'> Vorbesprechungen zur Lehrveranstaltung:INSZENIERTE PROJEKTE. Gender Studiesnach pers&ouml;nlicher Anmeldung im M&auml;rz 2013 im Zentrum f&uuml;r Kunst- und Wissenstransfer, Postgasse 6, 1010 Wienemail:beatrix.sunkovsky@uni-ak.ac.at&nbsp;</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S30414</td>
+        <td class='lva_info'> Inszenierte Projekte. Gender Studies(2013S / 4 WStd. / 4 ECTS / Vorlesungen / S30414)</td>
+        <td class='descr'> Im Rahmen der geblockten Lehrveranstaltung:&nbsp;INSZENIERTE PROJEKTE. Gender Studieswerden k&uuml;nstlerische Projekte entwickelt und ausgearbeitet.</td>
+        <td class='lvatype'> Vorlesungen</td>
+        <td class='anmerkungen'> pers&ouml;nliche Anmeldung erforderlich</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Sunkovsky, Beatrix AProf. Mag.art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 7</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 4,45</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?6245?14.03.13?&amp;dW14a7ja&amp; ">Schabus, Hans Gastprof. Mag.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40604</td>
+        <td class='lva_info'> Bildende Kunst - Schwerpunkt Skulptur(2013S / 7 WStd. / 4,45 ECTS / Projektarbeit / S40604)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Projektarbeit</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Schabus, Hans Gastprof. Mag.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 3</td>
+        <td class='nachweis'> aktive Mitarbeit (Referate)</td>
+        <td class='ects'> 3</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?4416?14.03.13?&amp;uCy14Gu7&amp; ">Seyfried, Günter Univ.-Lekt. Mag.art.</a></td>
+        <td class='ort'> Ort: Postgasse 6, 2. Stock, 1010 Wien, SeminarraumVorbesprechung: 8. M&auml;rz 2013 . 11.00 Uhr - weitere Termine nach Vereinbarung&nbsp;</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00121</td>
+        <td class='lva_info'> Genetic Art II(2013S / 3 WStd. / 3 ECTS / Seminar / S00121)</td>
+        <td class='descr'> Ziel der Lehrveranstaltung ist den Kontext der BioKunst unter philosophischen und kunsttheoretischen Gesichtspunkten zu erarbeiten. Die Studenten sollen in die Lage versetzt werden, vor dem Hintergrund der Bio Art, einen Bezug zwischen philosophischen Erkenntnissen und der naturwissenschaftlichen Erforschung des Menschen herzustellen.</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> Die Anmeldung erfolgt bei der Vorbesprechung oder per email an guenter.seyfried@uni-ak.ac.at</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Seyfried, Günter Univ.-Lekt. Mag.art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> - regelm&auml;&szlig;ige und aktive diskussionsbereite Teilnahme- ein Referat (Ihre Bildpr&auml;sentation) mit Handout- eine schriftliche Hausarbeit zum Ende des Semesters (Abgabe bis 15. August 2013)</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?5194?14.03.13?&amp;147p4xvD&amp; ">Jesberger, Katharina Univ.-Ass. M.A.</a></td>
+        <td class='ort'> Abhaltung:&nbsp;geblocktTermin:&nbsp;Donnerstag, 14-16 UhrBeginn:&nbsp;Donnerstag, 14. M&auml;rz 2013, 14-16 Uhr, H&ouml;rsaal&nbsp;4 (Altbau, 1. Stock)Ort:Erster Termin im H&ouml;rsaal 4, alle weiteren im Kunsthistorischen Museum / Gem&auml;ldegalerie&nbsp;insgesamt 9 Termine:14.3. (im HS 4)im Museum: 21.3., 11.4., 18.4., 25.4., 2.5., 16.5., 23.5., 6.6.</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00205</td>
+        <td class='lva_info'> Übung vor Originalen (Analyse künstlerischer Produktion)(2013S / 2 WStd. / 2 ECTS / Proseminar / S00205)</td>
+        <td class='descr'> Die &Uuml;bung vor Originalen findet in der Gem&auml;ldesammlung des Kunsthistorischen Museums statt. Jede/r TeilnehmerIn wird sich in eine intensive Auseinandersetzung mit einem Werk begeben, um es im Seminar der Gruppe vorzustellen. Der erste Schritt vor dem Original besteht aus einem intensiven Betrachten und dem Beschreiben des Gesehenen mit eigenen Worten. Als zweiter Schritt sollen unter Einbezug literarischer Quellen und der Ikonographie, sowie einer Einordnung in Kunstgeschichte und sozial-historische Hintergr&uuml;nde Interpretationen entwickelt und diskutiert werden. Teil der &Uuml;bung ist auch die Frage nach einer geeigneten Kunstvermittlung im Museum.</td>
+        <td class='lvatype'> Proseminar</td>
+        <td class='anmerkungen'> Teilnehmerbeschr&auml;nkung auf 15 Personen!Anmeldung:via Mail ansabine.eder@uni-ak.ac.at</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Jesberger, Katharina Univ.-Ass. M.A.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 3</td>
+        <td class='nachweis'> Anwesenheitsliste, schriftliche Arbeit am Ende des Semesters&nbsp;</td>
+        <td class='ects'> 3</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?177?14.03.13?&amp;yeA14qu7&amp; ">Lampalzer-Oppermann, Gerda Sen.Lect. Dr.phil.</a></td>
+        <td class='ort'> jeden Dienstag 10:00-12:15, H&ouml;rsaal 1Start: 12.3.2013&nbsp;</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40488</td>
+        <td class='lva_info'> Bildpunkte in Bewegung I - Video Art (Teil 2)(2013S / 3 WStd. / 3 ECTS / Vorlesungen / S40488)</td>
+        <td class='descr'> Videokunst ist in ihrer spezifischen Rolle als &Uuml;bergangsstadium und Vermittlerin zwischen analoger und digitaler Bilderzeugung mediengeschichtlich besonders interessant. In einem historischen &Uuml;berblick werden an Hand internationaler Beispiele ihre wichtigsten Entwicklungsphasen vorgestellt und ein &Uuml;berblick &uuml;ber die zeitgen&ouml;ssische Produktion gegeben. Da sich kulturhistorischen Bez&uuml;ge zwischen Medienkunstentwicklung und (kommunikations)gesellschaftlicher Bedingungen speziell in interdisziplin&auml;ren &Uuml;berschneidungen gut ablesen lassen, soll Videokunst auch speziell in ihrer Anlage zu Mischformen betrachtet werdenStichworte:Video und Bildende Kunst (Objekt, Installation, Environment, Performance),Video und Film (narrative Strukturen, media mix),Video und Musik (Videoclip, Visuals, Tanzvideos),Digital Video (Multimediaproduktion, interaktive Arbeiten),FernsehprojekteDie Vorlesung ist zweisemestrig angelegt. Im&nbsp;zweiten Semester werden Arbeiten von Ende der 80er Jahre bis heute&nbsp;gezeigt und besprochen.</td>
+        <td class='lvatype'> Vorlesungen</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Lampalzer-Oppermann, Gerda Sen.Lect. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> students are expected to write a 30 page paper based on a bibliography worked out with Prof Lefaivre</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?3421?14.03.13?&amp;1474H32a&amp; ">Lefaivre, Liane  o. Univ.-Prof. Dr.phil.</a></td>
+        <td class='ort'> By appoint ment with prof Lefaivre, in her office.&nbsp;</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S10223</td>
+        <td class='lva_info'> Geschichte und Theorie der Architektur. Integration/DiplomandInnenseminar(2013S / 2 WStd. / 2 ECTS / Seminar / S10223)</td>
+        <td class='descr'> this is an independent research-based seminar for students who wish to pursue a topic related to their final project</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> contact prof lefaivre at &nbsp; &nbsp; &nbsp; L.m.Lefaivre@gmail.com</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Lefaivre, Liane  o. Univ.-Prof. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Die Lehrveranstaltung besteht aus Einzelterminen f&uuml;r alle Koordinierungs-, Instrukutions- und Vorbereitungsaufgaben und aus zwei Blockveranstaltungen - ein Block zur Diskussion von Fachliteratur, ein Block zur Vorstellung der Arbeiten.</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?2741?14.03.13?&amp;WSQK14U7&amp; ">Ehalt, Hubert Christian Honorarprof. Univ.-Prof. Dr.</a></td>
+        <td class='ort'> Beginn: Mittwoch, 13.3.2013, 12 Uhr,Ort: Seminarraum A, Hauptgeb&auml;ude, Dachgeschoss Altbau, Oskar Kokoschka-Platz 2, 1010 Wien2. Termin: Freitag, 22.3.2013, 13.30 Uhr &ndash; 16 Uhr;Ort: Seminarraum am Franz Josefs-Kai 5/9, 1010 WienWeitere Termine werden bei LV-Beginn bekannt gegeben.</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00183</td>
+        <td class='lva_info'> Umgang mit dem Körper II - Körper und Kunst(2013S / 2 WStd. / 2 ECTS / Seminar / S00183)</td>
+        <td class='descr'> Die Welt des Jahres 2013 ist eine Bilderwelt. &Uuml;berall Hochglanzbilder. Scharf konturiert, lichtstark aufgenommen und reproduziert und in einer hohen Aufl&ouml;sung. Bilder kontaminieren alles.&nbsp; Wir, die Handelnden, sind auf scharfe, eindrucksvolle Bilder konditioniert. Wenn sonst alles finster ist, schaltet man einfach sein Smartphone ein und ist alsbald bei einem scharfen Bild &ndash; und seien es nur die Icons des Touchscreens.Bilder sind Rohmaterial. Jede/r ist gew&ouml;hnt, sie zu scannen, sie zuzuschneiden, zu &uuml;berschreiben. Da die Kognitionsf&auml;higkeit der Menschen sehr stark an Archetypen und Konstruktionen gebunden ist, wird die uns umgebende Wirklichkeit nicht so wahrgenommen, &bdquo;wie sie ist&ldquo;, sondern in den Bildern, in den Codes, in den Narrativen, in den Entschl&uuml;sselungen, mit denen wir sozialisiert wurden.Die K&uuml;nstlerInnen wissen das. Sie waren und sind die souver&auml;nen GestalterInnen, ManipulatorInnen, Kontext- und EntkontextualisiererInnen, AnalytikerInnen und VermittlerInnen von Bildbotschaften.Ein wesentlicher Bereich &ndash; qualitativ und quantitativ &ndash; von Bildern betraf und betrifft den menschlichen K&ouml;rper &ndash; bekleidet und unbekleidet, gestaltet, geschm&uuml;ckt und zunehmend &auml;sthetisiert. Kunst setzte und setzt sich mit dem K&ouml;rper auseinander und bereichert dynamisch das unendlich erscheinende Bildarchiv von K&ouml;rperbildern.Die K&uuml;nstlerInnen leisten diese Auseinandersetzung mit dem K&ouml;rper nicht historisch, philosophisch, soziologisch, ethnologisch, sondern k&uuml;nstlerisch. Sie begegnen den offenen Fragen, dem (den) Geheimnis(sen) mit Werken, die sehr oft ebenso geheimnisvoll sind.Mensch, Gesellschaft, Person, Individualit&auml;t sind abstrakte Begriffe, K&uuml;nstlerInnen schaffen konkrete Werke, die h&auml;ufig einer Einheit von Ort, Zeit und Handlung im Werk entspringen. Wenn sich die K&uuml;nste mit dem Menschen und seiner existentiellen, seiner gesellschaftlichen Situation auseinandersetzen, dann machen sie dies in bew&auml;hrten "Formaten" - Portrait, Akt, Genreszenen, Performances, etc. Die Darstellung des menschlichen K&ouml;rpers spielt in den K&uuml;nsten "die zentrale Rolle": der nackte K&ouml;rper, der geschm&uuml;ckte K&ouml;rper, der gestylte K&ouml;rper. K&ouml;rperbilder sind immer auch Gesellschaftsbilder. Gesellschaft wird durch konkrete Menschenbilder visualisiert. Die beiden "Pelzchen" von Tizian und Rubens z.B. sagen etwas &uuml;ber Geschlechteridentit&auml;t, &uuml;ber Scham, Erotik, Lust, etc. aus. Die Portraits von Francis Bacon und Lucian Freud tun dies ebenso, wie die Performances von VALIE EXPORT, Elke Krystufek, u.a.Die Lehrveranstaltung wird das Thema "Umgang mit dem K&ouml;rper II &ndash; K&ouml;rper und Kunst" unter st&auml;ndiger Ber&uuml;cksichtigung und Bezugnahme auf die k&uuml;nstlerische Auseinandersetzung mit K&ouml;rper, Identit&auml;t und Geschlecht thematisieren.Die Zielsetzung des Seminars besteht in der Anregung von offenen Analysen und Diskussionen (wider den Methodenzwang), die sich auf das Abenteuer einer innovativen, kritisch-analytischen Bild-, Menschen- und Weltbeobachtung einlassen.</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> Die Lehrveranstaltung besteht aus Einzelterminen f&uuml;r alle Koordinierungs-, Instrukutions- und Vorbereitungsaufgaben und aus zwei Blockveranstaltungen - ein Block zur Diskussion von Fachliteratur, ein Block zur Vorstellung der Arbeiten.</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Ehalt, Hubert Christian Honorarprof. Univ.-Prof. Dr.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Wie im Wintersemester 2012/13</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?3029?14.03.13?&amp;147dqf43&amp; ">Horak, Roman ao. Univ.-Prof. Dr.phil.</a></td>
+        <td class='ort'> Ort: HS 3Zeitplan: Es wird Bl&ouml;cke geben, die jeweils am Dienstag zwischen 14 Uhr und&nbsp;17 Uhr&nbsp;stattfinden werden.Termine: 12. 3.,14 Uhr -&nbsp;Vorbesprechung.</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S50972</td>
+        <td class='lva_info'> Culture Club 2(2013S / 2 WStd. / 2 ECTS / Seminar / S50972)</td>
+        <td class='descr'> Im Unterschied zu den vorigen Semestern geht es diesmal im Culture Club nicht vorrangig um theoretische Texte wichtiger Autorinnen und Autoren, sondern um den Bereich Popularkultur. Hier soll beispielhaft &uuml;ber popul&auml;re Musik, das Kino, das Fernsehen und das Internet gearbeitet werden.Die konkreten Themen - sie k&ouml;nnen von aktuellen TV-Serien bis zu Lady Gaga reichen - bleiben den Studierenden selbst &uuml;berlassen.&nbsp;&nbsp;Programm &amp; Termine&nbsp;12.&nbsp; 3.&nbsp;Vorbesprechung(14 Uhr)&nbsp;&nbsp; 9.&nbsp; 4. &nbsp;&nbsp;Musik&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23. 4.&nbsp; &nbsp;Kino&nbsp;&nbsp;&nbsp;7. 5.&nbsp;&nbsp;Fernsehen&nbsp;28. 5.&nbsp;&nbsp; Internet&nbsp;&nbsp; 4.&nbsp; 6.&nbsp; &nbsp;Abschlussdiskussion&nbsp;</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Horak, Roman ao. Univ.-Prof. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> None</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> None</td>
+        <td class='personlink'> None</td>
+        <td class='ort'> None</td>
+        <td class='semester'> None</td>
+        <td class='lvanr'> None</td>
+        <td class='lva_info'> None</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> None</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> False</td>
+        <td class='person'> None</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 3</td>
+        <td class='nachweis'> Anwesenheitsliste, schriftliche Arbeit am Ende des Semesters</td>
+        <td class='ects'> 3</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?177?14.03.13?&amp;147RWN4Y&amp; ">Lampalzer-Oppermann, Gerda Sen.Lect. Dr.phil.</a></td>
+        <td class='ort'> jeden Donnerstag 10:00-12:15,H&ouml;rsaal 1Start: 14.3.2013</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40490</td>
+        <td class='lva_info'> Bildpunkte in Bewegung II - Dokumentarfilm/Video (Teil 2)(2013S / 3 WStd. / 3 ECTS / Vorlesungen / S40490)</td>
+        <td class='descr'> In &bdquo;Bildpunkte in Bewegung II&ldquo; wird audiovisuelle Medienarbeit an Hand von dokumentarischen Arbeiten untersucht. Dabei soll auf die Geschichte des Dokumentarfilms/videos ebenso eingegangen werden wie auf die zeitgen&ouml;ssische Produktion. Besonderes Augenmerk wird einerseits auf den Einfluss neuer Technologien (Video, digitale Medien) auf den Dokumentarfilm gelegt, anderseits auf die Entwicklung neuer Modelle in der Produktion. Medienzentren, Arbeitskollektive, partizipative Modelle als Versuche, die gr&ouml;&szlig;tm&ouml;gliche Unabh&auml;ngigkeit in der Produktion zu gew&auml;hrleisten. Schlie&szlig;lich werden die M&ouml;glichkeiten dokumentarischen Arbeitens als k&uuml;nstlerische Strategie untersucht.&nbsp;&nbsp;&nbsp;&nbsp;Stichworte:Politischer Dokumentarfilm/video, Zeitzeugenfilme/videos, experimentelle Formen des Dokumentarischen, Fake-Dokumentationen, inszenierter Dokumentarfilm/video, Mischformen, Essayfilm/video, Kunstdokumentationen, Dokumentarfilm/video als Improvisation, etc...Die Vorlesung ist zweisemestrig.</td>
+        <td class='lvatype'> Vorlesungen</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Lampalzer-Oppermann, Gerda Sen.Lect. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> siehe den Eintrag bei Prof. E. Strouhal</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?3029?14.03.13?&amp;1mj4d7h4&amp; ">Horak, Roman ao. Univ.-Prof. Dr.phil.</a></td>
+        <td class='ort'> HS 3, Di., 17 - 20 Uhr.Vorbesprechung: Di., 12.3. 17 Uhr (HS 3)</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00166</td>
+        <td class='lva_info'> Ästhetik und Politik 2: Spiele der Stadt(2013S / 2 WStd. / 2 ECTS / Seminar / S00166)</td>
+        <td class='descr'> siehe den Eintrag bei Prof. E. Strouhal</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Horak, Roman ao. Univ.-Prof. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 1</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 1</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?413?14.03.13?&amp;q14743ws&amp; ">Schnell, Veronika VAss. Mag. phil.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S30265</td>
+        <td class='lva_info'> Theorien zeitbasierter Systeme(2013S / 1 WStd. / 1 ECTS / Seminar / S30265)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Schnell, Veronika VAss. Mag. phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> m&uuml;ndliche Pr&uuml;fungSeminararbeit&nbsp;</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?2762?14.03.13?&amp;a14egm7k&amp; ">Pohl, Sigrid Univ.-Lekt. Mag. art.</a></td>
+        <td class='ort'> Fr 10.00 - 11.30Kultur- und GeistesgeschichteExpositur Franz-Josefs-Kai 5A-1010 Wien&nbsp;erste Veranstaltung: 15. M&auml;rz 2013</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S50769</td>
+        <td class='lva_info'> Gegenwart und Geschichte des textilen Mediums II(2013S / 2 WStd. / 2 ECTS / Proseminar / S50769)</td>
+        <td class='descr'> Die Themenfelder der Vorlesung &bdquo; Gegenwart und Geschichte des textilen Mediums &bdquo;- Kulturgeschichte des Textils (Kleidung, Mode, Wohnen, Alltagstextilien), textile Objekte aus der Kunst sowie Materialqualit&auml;ten und &auml;sthetische Wirkung von Textilien- werden durch Inhalte aus den Bereichen Produktion (technologische, &ouml;kologische, &ouml;konomische Aspekte) und Konsumtion erweitert.An exemplarischen Beispielen werden Inhalte aus den oben genannten Bereichen in Interaktion von Studierenden und Lehrender erarbeitet und mit medialer Unterst&uuml;tzung anschaulich gemacht.&nbsp;</td>
+        <td class='lvatype'> Proseminar</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Pohl, Sigrid Univ.-Lekt. Mag. art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 1</td>
+        <td class='nachweis'> </td>
+        <td class='ects'> 1</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?3125?14.03.13?&amp;1xj474rt&amp; ">Manner, Boris Roland Sen.Sc. Mag.phil.</a></td>
+        <td class='ort'> Zentrum f&uuml;r Kunst - und Wissenstransfer, Postgasse 6, 1. Stock, 1010 Wien.</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S30403</td>
+        <td class='lva_info'> Logik und Sprache(2013S / 1 WStd. / 1 ECTS / Seminar / S30403)</td>
+        <td class='descr'> Bei Problemen mit eigenen Texten.Ziel: Diskursivit&auml;t, reflexiver Umgang mit der eigenen Arbeit.Form :Einzelgespr&auml;ch</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> Nurmit pers&ouml;nlicher Anmeldung : boris.manner@uni-ak.ac.at</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Manner, Boris Roland Sen.Sc. Mag.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Es besteht immanenter Pr&uuml;fungscharakter, wobei zwei Drittel der Vorlesungen besucht werden m&uuml;ssen.Die Teilnahme an den Exkursionen (Prater, Lobau) ist verpflichtend.Aktive Beteiligung an der Wissensvermittlung ist erw&uuml;nscht.</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?6065?14.03.13?&amp;14Sb7eV4&amp; ">Maurmair, Roland Univ.-Lekt. Mag.art. Dr.phil.</a></td>
+        <td class='ort'> Vorbesprechung:14.03.2013, 14-16.30 Uhr / Postgasse 6 / 2.Stock21.03.2013, 14-16.30 Uhr11.04.2013, 14-18.30Uhr (Exkursion)18.04.2013, 14-16.30 Uhr25.04.2013, 14-16.30 Uhr02.05.2012, 14-18.30 Uhr (Exkursion)16.05.2012, 14-16.30 Uhr23.05.2012, 14-16.30 Uhr&nbsp;&Auml;nderungen bez&uuml;glich des Veranstaltungsortes, sowie weitere Details werden im Falle per mail bekannt gegeben.</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00250</td>
+        <td class='lva_info'> Urban Wilderness - Stadt.Leben.Forschung II(2013S / 2 WStd. / 2 ECTS / Vorlesungen / S00250)</td>
+        <td class='descr'> Urban Wilderness Stadt.Leben.Forschung IIUrban Wilderness II beginnt dort, wo Urban Wilderness I endete;Gemeinsam tauchen wir ein, in die lebendige, urbane Umwelt, erweitern unsere Wahrnehmung und Komfortzone, begeben uns in eine Welt der Sinne, um die Sprache der Natur und das Lesen der Landschaft zu erlernen.Neben Spurenlesen, Vogelsprache und diversen Orientierungstechniken, besch&auml;ftigen wir uns vertiefend mit den Mentoringmethoden nativer Kulturen und deren animistischer Weltanschauung.Natives Wissen in Kombination mit konstruktivistischen Denkans&auml;tzen unterst&uuml;tzen uns dabei, einen anderen Blick auf die Wirklichkeit zu generieren und unsere Naturverbindung zu erh&ouml;hen.Durch Anwendung des Erlernten und dem Erkennen der eigenen F&auml;higkeiten praktizieren wir einen aktiven Wissenstransfer.Der Fokus liegt auf der gemeinsamen Eroberung des urbanen Raums und der pers&ouml;nlichen Produktion der Studierenden.Die Vorlesung findet bei jeder Witterung statt.</td>
+        <td class='lvatype'> Vorlesungen</td>
+        <td class='anmerkungen'> Anmeldungen bis einschlie&szlig;lich Montag, 11.03.2013 m&ouml;glich.Um pers&ouml;nliche Anmeldung wird gebeten: roland.maurmair@uni-ak.ac.at</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Maurmair, Roland Univ.-Lekt. Mag.art. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Schriftliche Pr&uuml;fung am Semesterende, voraussichtlich am 21.06.2013, 11-12:30 Uhr, HS1. Keine Anmeldung erforderlich.</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?6123?14.03.13?&amp;T14V7N4Y&amp; ">Kernbauer, Eva Univ.-Prof. Mag.phil. Dr.phil.</a></td>
+        <td class='ort'> Abhaltung:geblocktTermin:Freitag, 11-13 UhrBeginn:Freitag, 8. M&auml;rz 2013, 11-13 Uhr, H&ouml;rsaal&nbsp;1 (Altbau, Erdgescho&szlig;)Ort:H&ouml;rsaal 1Termine:08.03.2013 Eva Kernbauer, Einf&uuml;hrung15.03.2013 Christian Kravagna, "Transkulturalit&auml;t"22.03.2013 Birgit Haehnel, "Whiteness"12.04.2013 Katharina Jesberger, "Cr&eacute;olit&eacute;"26.04.2013 Georg Vasold, "Weltkunstgeschichte"03.05.2013 Verena Krieger, "Kartographie"07.06.2013 Tobias Wendl, "Appropriation"14.06.2013 Susanne Leeb, "Relativismus/Universalismus"</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00339</td>
+        <td class='lva_info'> Transkulturalität und globale Kulturgeographien (Zyklus IV)(2013S / 2 WStd. / 2 ECTS / Vorlesungen / S00339)</td>
+        <td class='descr'> Die Vortr&auml;ge der Ringvorlesung behandeln k&uuml;nstlerische und wissenschaftliche Auseinandersetzungen mit globalen Kulturgeographien, transkulturellen Begegnungen und Migrationsbewegungen. Daraus entstehen Einblicke in aktuelle und historische Modelle transkultureller Kunstwissenschaft, Weltkunstgeschichte und Global Art History.Die Vorlesung findet als Ersatz f&uuml;r die Vorlesung &bdquo;Kunsterweiterungen 1950-2000&ldquo; (Prof. Patrick Werkner) statt. Zur Vorbereitung der einzelnen Vortr&auml;ge und der Pr&uuml;fung gibt es einen Handapparat in der Bibliothek, mit Lekt&uuml;reempfehlungen der Vortragenden. DieseLiteraturlistefinden Sie auch im Download hier.Plakat&nbsp;</td>
+        <td class='lvatype'> Vorlesungen</td>
+        <td class='anmerkungen'> Anrechenbarkeit:Kunstgeschichte ModerneZeitgen&ouml;ssische KunstZyklus III-IV</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Kernbauer, Eva Univ.-Prof. Mag.phil. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> nach Abgabe und Fortschritt der Arbeit,</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?383?14.03.13?&amp;e14gme74&amp; ">Vergeiner, Renate ao. Univ.-Prof. Dr.phil.</a></td>
+        <td class='ort'> n.V.&nbsp;Ort:in den R&auml;umen der Kultur- und Geistesgeschichte, Franz-Josefskai 5 A-1010 WIENZeit:bitte vorher Kontaktnahme bzgl. Inhalt und Dauer des Gespr&auml;ches, Fragenkatalog damit ich mich auf Sie einstellen kannrenate.vergeiner@uni-ak.ac.at. oder bei serveproblemen etc: renatevergeiner@yahoo.at</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S50795</td>
+        <td class='lva_info'> DiplomandInnenseminar(2013S / 2 WStd. / 2 ECTS / Seminar / S50795)</td>
+        <td class='descr'> Einzelbetreuung der Diplomanden je nach Fortschritt der Forschung und Stand der Arbeit</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Vergeiner, Renate ao. Univ.-Prof. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 1</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 1</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?3056?14.03.13?&amp;147Uue4G&amp; ">Moswitzer, Max wiss. Mitarb.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40593</td>
+        <td class='lva_info'> Interaktive Medien V(2013S / 1 WStd. / 1 ECTS / Seminar / S40593)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Moswitzer, Max wiss. Mitarb.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 1</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 1</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?5760?14.03.13?&amp;x147trv4&amp; ">Gholizadeh Toosarani, Mischan Univ.-Lekt. Mag.art.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S51089</td>
+        <td class='lva_info'> Code & Repräsentation I(2013S / 1 WStd. / 1 ECTS / Seminar / S51089)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Gholizadeh Toosarani, Mischan Univ.-Lekt. Mag.art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Pr&uuml;fungsimmanente Lehrveranstaltung + schriftliche Seminar/Abschlussarbeit in GruppenIm Seminar werden u.a. Aufgaben f&uuml;r Kleingruppenarbeiten gestellt. Die Ergebnisse der Kleingruppen werden wieder insPlenumeingebracht, je nach Thematik und Fragestellungen und TeilnehmerInnenzahl von zwei bis drei Gruppen/deren VertreterInnen quasi als Vortrag mit Diskussion &ndash; die restlichen Gruppen haben dann die M&ouml;glichkeit, mir ihre Ergebnisse schriftlich/per mail abzugeben &ndash; oder als Diskussion zwischen den Gruppen.Sinnbildender Teil der Gruppenarbeiten sind auch dieProzesse unter den Gruppenmitgliedern, jedenfalls hinblicklich Meinungsfindung, Kommunikations- und Pr&auml;sentationsformen. Die schriftlichen Abschluss/Seminar-Arbeiten erfolgen in Gruppen, wo es u. a. auch darum geht, die Meinungsfindung innerhalb der Gruppe darzustellen, zu hinterfragen und theoretisch zu untermauern.Ich erwarte2/3-Anwesenheitbei den LV-Modulen, mehr Fehlstunden k&ouml;nnen nach Absprache durch &bdquo;Kompensationsarbeiten&ldquo; zu den &bdquo;vers&auml;umten&ldquo; Themenkreisen ausgeglichen werden.</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?2849?14.03.13?&amp;14r7ywpn&amp; ">Prokop, Sabine Univ.-Lekt. Dr.phil.  Mag. art.</a></td>
+        <td class='ort'> Seminarraum Kultur- und Geistesgeschichte, Franz-Josefs-Kai 5/9 1010 WienDonnerstag, 14-15.30, w&ouml;chentlich, Beginn: 14.M&auml;ez 2013</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00187</td>
+        <td class='lva_info'> Mein - dein - unser Blick(2013S / 2 WStd. / 2 ECTS / Seminar / S00187)</td>
+        <td class='descr'> Anhand von Beispielen werden medienspezifisch konstruierte Blicke (nicht zuletzt der TeilnehmerInnen) in den visuellen Medien hinsichtlich der eingeschriebenen, sozial konstruierten ethnischen und Geschlechterdifferenzen diskutiert, besonderes Augenmerk liegt jedoch auf der (m&ouml;glichen) Dekonstruktion dieser Identit&auml;ten. Grundfragen sind dabei, welches Widerstandspotenzial innerhalb der Massenmedien verborgen ist und inwiefern die Macht des gerichteten Blickes ver&auml;ndert werden kann.Die Studierenden sollen Einblicke in verschiedene theoretische und methodologische Zusammenh&auml;nge bez&uuml;glich der Repr&auml;sentation und Konstruktion von Geschlecht und Ethnizit&auml;t im Rahmen der Alltags&auml;sthetik erhalten, deren sozio-historische Konstruiertheit erfassen, diese mit ihren eigenen Alltagserfahrungen in Zusammenhang bringen und beides kritisch hinterfragen. Die Wahrnehmungs- und Kommunikationsvorg&auml;nge innerhalb der Lehrveranstaltung dienen ebenso als Diskussionsmaterial. Es werden u.&nbsp;a. Methoden der Bild-, Kunst- Film- und av-Medienanalyse erprobt.Viele praktische Beispiele dienen dazu, diezeichenhafte Bedeutung verschiedenster Bildelementein diversen Kulturkreisen undKulturebenenzu diskutieren. Denn durch die Dominanz der (audio)visuellen Medien in unserem Alltag sinkt zwar die Lesef&auml;higkeit, die F&auml;higkeit Bilder zu dechiffrieren hingegen steigt rasant - allerdings nicht ohne dass die RezipientInnen durch die eingeschriebenen ideologischen Hintergr&uuml;nde entsprechend konstruiert werden.Grundthema sind die sogenannten automatischen, durch die m&auml;nnlich dominierte, westliche Gesellschaft generierten &Uuml;bereink&uuml;nfte, auf die man sich bei der Codierung von Inhalten bezieht. Dabei gehe ich besonders auf die historisch bedingten aktuellen &Auml;nderungen im gesamtkulturellen Kontext ein.In all diesen restriktiven Strukturen findet sich trotzdem f&uuml;r weite Bev&ouml;lkerungskreise die M&ouml;glichkeit Bedeutungen zu verhandeln. So k&ouml;nnten (audio)visuelle Texte auch widerst&auml;ndisch &sbquo;gelesen&rsquo; werden. Ein gro&szlig;er Stellenwert kommt in der massenmedialen Textproduktion demVergn&uuml;genzu. Denn mit John Fiske kann festgestellt werden, dass &bdquo;Leute keine T&auml;tigkeit &ndash; ob politisch oder gesellschaftlich oder sonst eine &ndash; ausf&uuml;hren, dienichteinen Moment der Lust beinhaltet.&ldquo; Und diese Lust (pleasure) sei &bdquo;als eine als eine Motivation zu verstehen, die zu einem progressiven oder zumindest konfliktbereiten Verst&auml;ndnis der sozialen Ordnung f&uuml;hrt (M&uuml;ller 1993: 9f).Ausgehend von der Film-&amp; Fernsehtheorie sowie der Kunst/Kulturgeschichte werden Ans&auml;tze der Visuellen Kommunikation, des Strukturalismus, der Mediensemiotik und der feministischen Medientheorie sowie solche postkolonialer Theoretiker_innen in die Lehrveranstaltung integriert.Kernliteratur:Baudry, Jean-Louis (1993). &ldquo;Ideologische Effekte erzeugt vom Basisapparat&rdquo;. In:Eikon (Internationale Zeitschrift f&uuml;r Photographie und Medienkunst)5/1993: 34-43, Wien (&ldquo;Effets ideologiques - produit par l&rsquo;appareil de base&rdquo;. In:cin&eacute;thique7/8 1970. Reprint in: Baudry, Jean-Louis.L&rsquo;effet Cin&eacute;ma. Paris: Albatros 1978)Prokop, Sabine (2005). &bdquo;Die Illusion von Wirklichkeit. What Would You Rather See &ndash; a Disney Crocodile Robot or a Real Crocodile?&rdquo;In: Bernard, Jeff; Fikfak, Jurij; Grzybek, Peter (eds.).Text &amp; Wirklichkeit / Text &amp; Reality.Ljubljana, Wien, Graz: ZRC, 181-192Prokop, Sabine (2003). &bdquo;Downloads &ndash; Virtuelle Erinnerungen&ldquo;. In: Bernard, Jeff; Voigt, Vilmos; Withalm, Gloria (eds).Media &ndash; Old an New&nbsp;/&nbsp; Medien &ndash; Alt und Neu(= Semiotische Berichte mit Linguistik Interdisziplin&auml;r 27 (1-4) 2003). Wien: &Ouml;GS/ISSS, 243-256Prokop, Sabine (2001). &bdquo;Interaktivit&auml;t in den Neuen Medien&ldquo;. In: Bernard, Jeff; Withalm, Gloria (eds).Mythen, Riten, Simulakra. Semiotische Perspektiven(= Angewandte Semiotik 18/19) Band II Felder und Applikationen. Wien &Ouml;GS/ISSS, 1185-1199Schaffer, Johanna (2008).Ambivalenzen der Sichtbarkeit. &Uuml;ber die visuellen Strukturen der Anerkennung. Bielefeld: Transkript Verlag&nbsp;</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Prokop, Sabine Univ.-Lekt. Dr.phil.  Mag. art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Vorlage von einer Rezension / Werkbesprechung zu einem Buch aus der Fachliteraturliste (5.000 bis 6.000 Zeichen), Erstellung einer Seminararbeit (Studien vor Ort) im Umfang von 20.000 bis 30.000 Zeichen.</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?2741?14.03.13?&amp;1RaNa47P&amp; ">Ehalt, Hubert Christian Honorarprof. Univ.-Prof. Dr.</a></td>
+        <td class='ort'> &nbsp;Beginn: Mittwoch, 13.3.2013, 13 Uhr,Ort: Seminarraum A, Hauptgeb&auml;ude, Dachgeschoss Altbau, Oskar Kokoschka-Platz 2, 1010 Wien&nbsp;2. Termin: Freitag, 22.3.2013, 16.30 Uhr &ndash; 19 Uhr;Ort: Seminarraum am Franz Josefs-Kai 5/9, 1010 Wien&nbsp;Weitere Termine werden bei LV-Beginn bekannt gegeben.</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00184</td>
+        <td class='lva_info'> Alltag und Ästhetik, Kunst und Ästhetik(2013S / 2 WStd. / 2 ECTS / Seminar / S00184)</td>
+        <td class='descr'> Alltag ist ein Begriff, der keine wissenschaftliche Sch&auml;rfe besitzt, aber allgemein verst&auml;ndlich die vertraute, gew&ouml;hnliche, banale Strukturierung des Lebens der Menschen beschreibt. Ein Leben besteht aus &ndash; in Summe &ndash; allen Tagen, deren Ablauf sich in vielen Aspekten gleicht. Gegenbegriffe zu &bdquo;Alltag&ldquo; waren fr&uuml;her &bdquo;Sonntage und Feiertage&ldquo; und Tage mit besonderen Ereignissen.Allerdings wurden gesellschafts- und wirtschaftshistorisch die Grenzen zwischen &bdquo;Alltag&ldquo;, &bdquo;Feiertag&ldquo;, &bdquo;Ereignistag&ldquo; nivelliert. Die Ereignisgesellschaft soll und will &uuml;berall sein. Dusche und Darmentleerung k&ouml;nnen bei der Anwendung der richtigen Produkte (das versprechen die Hersteller) zum Ereignis werden; das Arbeitsleben mit seinen Ereignissen selbstverst&auml;ndlich auch. Obwohl die Tage, die die Menschen erleben, allesamt den haut-go&ucirc;t des Alltags haben, obwohl die Ereignisgesellschaft fordert, dass &uuml;berall Erlebnis sein kann und sein soll, bleibt der Unterschied zwischen Alltag und Kunst aufrecht. Beide, Alltag und Kunst, haben ihr Verh&auml;ltnis zur &Auml;sthetik und ihre &auml;sthetischen Anspr&uuml;che. Der &Auml;sthetikanspruch des Alltags ist oberfl&auml;chlich &ndash; glatte Haut, Sixpack-Bauch, Meschen, Glitzer und Glimmer, Trendfarben, Trenddesigns. Die &Auml;sthetik der Kunst ist subtiler, widerspr&uuml;chlicher, verabschiedet vom tradierten Regelkanon des Sch&ouml;nen.Beide &Auml;sthetiken, die des Alltags und die der Kunst, sind in hohem Ma&szlig; kontextbezogen. Bei der Alltags&auml;sthetik z&auml;hlt die Quote, bei der Kunst&auml;sthetik Urteil, Idee und Vision von Eliten.In der Lehrveranstaltung geht es &ndash; aus kulturhistorischer, kulturwissenschaftlicher, anthropologischer und ethnographischer Perspektive &ndash; um eine Ordnung der Diskurse, der wissenschaftlichen und der allt&auml;glichen Begrifflichkeiten und Redeweisen &uuml;ber den Alltag, die Kunst, das Sch&ouml;ne und die &Auml;sthetik.Im Sinne des &bdquo;sapere aude&ldquo;, des Wissenswagnisses, das Immanuel Kant gefordert hat, und das gegenw&auml;rtig in vielen Lebenswelten notwendig ist, bietet die Lehrveranstaltung die Freiheit, alte Fragen ganz neu zu denken, zu formulieren, zu diskutieren und zu eigenst&auml;ndigen Ergebnissen und Erkenntnissen zu kommen.Als Ideengeber, Gestalter und Moderator ist mir die Eigenst&auml;ndigkeit des Denkens und der Diskussion der SeminarteilnehmerInnen wichtiger als die Exegese der &bdquo;MeisterdenkerInnen&ldquo;. Selbstverst&auml;ndlich: man muss an einer Kunstuniversit&auml;t Michel Foucault, Pierre Bourdieu, Richard Sennett, Susan Sonntag, Judit Butler, etc. kennen. Die Genannten nicht zu kennen, ist im &bdquo;kunstuniversit&auml;ren Diskursaquarium&ldquo; eine intellektuelle Hilflosigkeitserkl&auml;rung. Aber das Wichtige, ja Entscheidende bei Bildungsprozessen ist die Eigenst&auml;ndigkeit des Denkens; sie erm&ouml;glicht die Emanzipation vom Mainstream. Kulturwissenschaft erm&auml;chtigt, bietet die Chance, eigenst&auml;ndig zu denken und damit auch eigenst&auml;ndig zu handeln und zu sein...</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> Die Lehrveranstaltung besteht aus Einzelterminen f&uuml;r alle Koordinierungs-, Instrukutions-&nbsp;und Vorbereitungsaufgaben und aus zwei Blockveranstaltungen - ein Block zur Diskussion von Fachliteratur, ein Block zur Vorstellung der Arbeiten.</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Ehalt, Hubert Christian Honorarprof. Univ.-Prof. Dr.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> m&uuml;ndliche und schriftliche Arbeit (Abgabe bis 15. August 2013)</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?5878?14.03.13?&amp;1r47tn43&amp; ">Schwanberg, Johanna Univ.-Lekt. Mag. Dr.</a></td>
+        <td class='ort'> Abhaltung:&nbsp;geblocktBeginn:&nbsp;Freitag, 15. M&auml;rz 2013, 13-17 Uhr, Seminarraum B (Altbau, Dachgescho&szlig;)Termine:15.03.2013 - 13:00 bis 17:00 | Seminarraum B (Vorbesprechung, Einf&uuml;hrung, Referatsvergabe)12.04.2013 - 13:00 bis 18:00 | Seminarraum B13.04.2013 - 10:00 bis 18:00 | Seminarraum B24.05.2013 - 13:00 bis 18:00 | H&ouml;rsaal 225.05.2013 - 10:00 bis 18:00 | H&ouml;rsaal 2</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00302</td>
+        <td class='lva_info'> Skulptur - Plastik - Objekt: Von der Renaissance bis ins 20. Jahrhundert(2013S / 2 WStd. / 2 ECTS / Proseminar / S00302)</td>
+        <td class='descr'> Lange wurde sie marginalisiert. In den letzten Jahren ist jedoch eine &bdquo;Renaissance der Skulptur&ldquo; auszumachen. Ausgehend von dem wiedererwachten Interesse an der Skulptur, die durch ihre r&auml;umliche Pr&auml;senz stets einen besondere Stellenwert in der bildenden Kunst hatte, geht die LV dem sich st&auml;ndig wandelnden Skulpturenbegriffs im Laufe der Kunstgeschichte nach.Die LV n&auml;hert sich dabei der Bildhauerkunst aus unterschiedlichen Perspektiven. Zu einem gibt sie einen &Uuml;berblick &uuml;ber die Geschichte der Skulptur von der Renaissance bis zur Mitte des 20. Jahrhunderts und thematisiert die stilistischen Entwicklungen in den einzelnen Kunstlandschaften. Dabei werden verschiedene Techniken, Materialien, k&uuml;nstlerischen Aufgaben und Themen ber&uuml;cksichtigt und an ausgew&auml;hlten Beispielen analysiert.Bedeutende BildhauerInnen (Donatello, Michelangelo, Bernini, Giambologna, Rodin, Claudel u.a.) werden genauso hervorgehoben wie die verschiedenen Funktionen (Grabplastik, Denkmal, Portr&auml;t u.a.).Zur Sprache kommt auch die Frage nach der speziellen Charakteristik der Skulptur im Unterschied zu Malerei und Grafik anhand diverser theoretischen Debatten (&bdquo;Wettstreit der K&uuml;nste&ldquo;) &ndash; genauso aber das Zusammentreffen zwischen Skulptur, Malerei und Architektur in Form von &bdquo;Kunst am Bau&ldquo; oder mehrfarbigen Plastiken.Literatur zur Einf&uuml;hrung:-&nbsp;Duby, Georges und Jean-Luc Duval (Hrsg.), Skulptur. Von der Antike bis zur Gegenwart, 2. Bde., K&ouml;ln u.a. 2006.-&nbsp;D&uuml;rre, Stefan, Seemanns Lexikon der Skulptur, Leipzig 2007.Spezialliteratur zu einzelnen Themen wird in der VO bekannt gegeben.</td>
+        <td class='lvatype'> Proseminar</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Schwanberg, Johanna Univ.-Lekt. Mag. Dr.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Aktivit&auml;t im Seminar.</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?3125?14.03.13?&amp;d1474ahf&amp; ">Manner, Boris Roland Sen.Sc. Mag.phil.</a></td>
+        <td class='ort'> Die Lehrveranstaltung wird als Zusammenarbeit von Anna Spohn und mir gestaltet. Bei Interesse bitte per Email einen Gespr&auml;chstermin mit Anna Spohn oder mir vereinbaren. Es gibt dann Anfang Oktober eine Vorbesprechung. Da werden auch die Abhaltungstermine vereinbart / festgelegt. Sch&ouml;nen Sommer !</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00196</td>
+        <td class='lva_info'> Identitätsbildung im künstlerischen Feld. Farbe Sprache Blick(2013S / 2 WStd. / 2 ECTS / Seminar / S00196)</td>
+        <td class='descr'> Eckpunkte unseres Diskurses sind die "Bemerkungen &uuml;ber die Farben" von L. Wittgenstein ( in : Ludwig Wittgenstein: &Uuml;ber Gewi&szlig;heit, stw, Frankfurt/Main 1984) und die Bemerkungen von M. Merleau-Ponty in seiner "Ph&auml;nomenologie der Wahrnehmung" (de Gruyter, Berlin 1966). Den "k&uuml;nstlerischen" Positionen / Konzepten von Josef Albers, Auguste Herbin und Johannes Itten wird im Seminar ebenso gro&szlig;e Aufmerksamkeit gewidmet werden.</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Manner, Boris Roland Sen.Sc. Mag.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 1</td>
+        <td class='nachweis'> Anfertigen einer Pr&auml;sentationsmappe mit Kalkulation.</td>
+        <td class='ects'> 1</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?3125?14.03.13?&amp;ce14q7ue&amp; ">Manner, Boris Roland Sen.Sc. Mag.phil.</a></td>
+        <td class='ort'> Zentrum f&uuml;r Kunst - und Wissenstransfer, Postgasse 6, 1. Stock, 1010 Wien.</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S30391</td>
+        <td class='lva_info'> Kunst und Wissenstransfer. Konversatorien zur Projektbetreuung(2013S / 1 WStd. / 1 ECTS / Konversatorium / S30391)</td>
+        <td class='descr'> Im Zuge der Vorbereitung zu einem Projekt k&ouml;nnen diverseste Probleme auftreten. Im Konversatorium besteht die M&ouml;glichkeit in Einzelgespr&auml;chen den Schwierigkeiten auf die Spur zu kommen und Strategien zu entwickeln, um das Projekt verwirklichen zu k&ouml;nnen.Konkrete k&uuml;nstlerische Vorhaben (von der Ausstellungsplanung &ndash; zur Intervention im &ouml;ffentlichen Raum) werden von der Idee bis zur Verwirklichung begleitet. Alle Stufen einer Projektentwicklung werden in Einzelgespr&auml;chen durchlaufen. Die Formulierung der Idee, Erstellung eines Konzeptes, Pr&auml;sentation des Vorhabens bei Geldgebern und F&ouml;rderstellen, Entwicklung eines Kostenvoranschlages und Pressekontakte seien hier als wichtige Punkte genannt. Voraussetzung ist ein konkretes k&uuml;nstlerisches Vorhaben.Dauer der Beratung: flexibel.Form :Einzel- oder Gruppengespr&auml;ch</td>
+        <td class='lvatype'> Konversatorium</td>
+        <td class='anmerkungen'> Nurmit pers&ouml;nlicher Anmeldung : boris.manner@uni-ak.ac.at</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Manner, Boris Roland Sen.Sc. Mag.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Erwartet wird die Ausarbeitung eines m&uuml;ndlichen Referates mit schriftlicher Textfassung sowie regelm&auml;&szlig;ige Anwesenheit und Diskussionsbeteiligung.</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?4669?14.03.13?&amp;Dz1J47ax&amp; ">Altmann, Karin Univ.-Lekt. Mag.art.</a></td>
+        <td class='ort'> Seminarw&ouml;chentlich Donnerstag, 11&ndash;12:30 UhrAchtung! Neuer Veranstaltungsort:H&ouml;rsaal 3(Hauptgeb&auml;ude, Neubau, Erdgeschoss)Beginn: Donnerstag, 14.&nbsp;M&auml;rz 2013, 11&ndash;12:30 Uhr&nbsp;</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S30406</td>
+        <td class='lva_info'> The Quest for Spirituality(2013S / 2 WStd. / 2 ECTS / Seminar / S30406)</td>
+        <td class='descr'> THE QUEST FOR SPIRITUALITY - Spiritualit&auml;t im Kontext zeitgen&ouml;ssischer Kunst und internationaler ProjekteIm Sommersemester widmen wir uns erneut den Zusammenh&auml;ngen zwischen Kunst und Spiritualit&auml;t sowie den verschiedensten zeitgen&ouml;ssischen k&uuml;nstlerischen Positionen, die - teils unverh&uuml;llt, teils subtil verfremdend - spirituelle Motive und Themen transportieren. Die Frage nach der eigenen Identit&auml;t und die Rolle, die Spiritualit&auml;t als indentit&auml;tsgebende und sinnstiftende Komponente der menschlichen Existenz hat, wird besonders deutlich, wenn K&uuml;nstlerInnen ihren eigenen biografischen Hintergrund in ihren Werken aufgreifen. Ob christlich, islamisch, j&uuml;disch, hinduistisch oder buddhistisch gepr&auml;gt, tantrische Techniken oder schamanische Rituale praktizierend oder selbst gebackener "Multi-Kulti-Glaube" thematisierend, es geht immer auch um das Bestimmen der eigenen Position, um die Frage nach der eigenen Identit&auml;t und dem Aufeinanderprallen von kulturellen Differenzen, dem viel zitierten "Clash of Civilisations".&nbsp;Die Studierenden sind wieder aufgefordert, ihre Schwerpunkte selbst zu setzen. Das detaillierte Seminarprogramm richtet sich daher nach den Interessen der TeilnehmerInnen.</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> Pers&ouml;nliche Anmeldung wird erbeten:karin.altmann@uni-ak.ac.at</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Altmann, Karin Univ.-Lekt. Mag.art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?2810?14.03.13?&amp;1rnw47t4&amp; ">Jahrmann, Margarete  Sen.Lect. Mag.art. Dr.phil.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40580</td>
+        <td class='lva_info'> Methoden künstlerischer Forschung(2013S / 2 WStd. / 2 ECTS / Seminar / S40580)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Jahrmann, Margarete  Sen.Lect. Mag.art. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Anwesenheit; alternierend Protokoll, Referat und Diskussionsleitung der TeilnehmerInnen, Erstellung von Bastelanleitungen</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?3686?14.03.13?&amp;qu1g474e&amp; ">Kräftner, Bernd Sen.Lect. Dr.</a></td>
+        <td class='ort'> Einf&uuml;hrungsveranstaltung gemeinsam mit Wolfgang Fiel am 04.03.2013 um 18:00; Ort: Expositur Sterngasse, 1010 Wienw&ouml;chentliche Termine jeweils Montag 18:00 abwechselnd mit der LV von&nbsp; Wolfgang FielSeminar mit begrenzter TelnehmenrInnenzahl&nbsp;</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S30331</td>
+        <td class='lva_info'> Code und Repräsentation V(2013S / 2 WStd. / 2 ECTS / Seminar / S30331)</td>
+        <td class='descr'> Curriculum horribileIn einem seiner Aufs&auml;tze spricht der Soziologe D. Baecker von der "Luhmann'schen Vermutung", dass n&auml;mlich die Einf&uuml;hrung des Computers &auml;hnlich "katastrophale" Auswirkungen auf die Gesellschaft haben werde, wie jene der Sprache, Schrift oder des Buchdrucks. Unter Katastrophe sind hier jene Auswirkungen gemeint, die die Einf&uuml;hrung eines radikal neuartigen Verbreitungsmedien auf die Struktur der Gesellschaft hat. Wie k&ouml;nnen wir uns das Verh&auml;ltnis zwischen Kommunikation, Verbreitung(smedium) und sozialer Struktur im Lichte dieser Ver&auml;nderungen vorstellen? Diese Frage betrifft nun auch und vor allem jene, die lernen und lehren (wollen): wie sollen wir mit den "Bedeutungs&uuml;bersch&uuml;ssen" umgehen, die durch die digitale Revolution entstehen und die zu einer "Restrukturierung" des Sozialen f&uuml;hren? Was oder wie sollen wir lernen, wenn unklar ist, was in einer zuk&uuml;nftigen Gesellschaft von Bedeutung sein wird? Welche demokratie-politischen Chancen und Risiken verbergen sich in der Neuformatierung von universit&auml;ren Curricula, die vorgeben, diese Unklarheit b&auml;ndigen zu k&ouml;nnen? M&uuml;ssen die Lernenden aufstehen und sich die Curricula selbst zusammenbasteln? Wenn, ja, wie kann oder soll das geschehen? Welche Prozeduren k&ouml;nnen des Basteln unterst&uuml;tzen?Wir werden diesen Fragen anhand von Literatur von Baecker, D, Luhmann, N.,&nbsp; Illich, I, Ranci&egrave;re, J., Elkins, J., und anderen nachgehen und versuchen, Curricula zu basteln.Die LV findet in Abstimmung und abwechselnd mit jener von Wolfgang Fiel w&ouml;chentlich, Montags, 18:00,&nbsp; statt (bitte auch den entsprechenden LV_Kurztext ber&uuml;cksichtigen)&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> projektorientiertes Seminar, beschr&auml;nkte TeilnehmnerInnenzahl&nbsp;</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Kräftner, Bernd Sen.Lect. Dr.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 3</td>
+        <td class='nachweis'> &bull; Beurteilungskriterien&ndash; Anwesenheit&ndash; Ausarbeitung einer schriftlichen Proseminararbeit (Filmanalyse und Buchkommentar)&nbsp;</td>
+        <td class='ects'> 3</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?355?14.03.13?&amp;C14vG7u4&amp; ">Jutz, Gabriele ao. Univ.-Prof. Mag. Dr.phil.</a></td>
+        <td class='ort'> Mittwoch, 10.00 (p&uuml;nktlich) bis 12.30Mittwoch, 10.00 (p&uuml;nktlich) bis 12.30, H&ouml;rsaal 4Beginn: 6. M&auml;rz 2013Mittwoch, 10.00 (p&uuml;nktlich) bis 12.30&nbsp;</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40562</td>
+        <td class='lva_info'> Einführung in die Filmanalyse (Gender Studies)(2013S / 3 WStd. / 3 ECTS / Proseminar / S40562)</td>
+        <td class='descr'> In diesem Proseminar soll ein &Uuml;berblick &uuml;ber repr&auml;sentative Phasen der Filmgeschichte &ndash; vom Early Cinema &uuml;ber das klassische Hollywoodkino bis hin zum Kino der Moderne und der Postmoderne &ndash; vermittelt werden. Anhand ausgew&auml;hlter Filmbeispiele werden Verfahren der Filmanalyse, im Sinne einesclose readingundclose listeningerprobt, ihr methodischer Hintergrund zur Diskussion gestellt und gemeinsam ein Leitfaden f&uuml;r die Filmanalyse entwickelt. Die materiellen Voraussetzungen des Filmmediums sollen dabei ebenso reflektiert werden wie stilgeschichtliche, narratologische, gender-orientierte und semiotische Ans&auml;tze.</td>
+        <td class='lvatype'> Proseminar</td>
+        <td class='anmerkungen'> &bull; Teilnahmevoraussetzungen&ndash; F&auml;higkeit und Bereitschaft, englischsprachige theoretische Texte zu lesen.&nbsp;</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Jutz, Gabriele ao. Univ.-Prof. Mag. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 1</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 1</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?5542?14.03.13?&amp;j14f7d4a&amp; ">Fiel, Wolfgang Sen.Art. Dipl.-Ing. MArch. MPhil.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40542</td>
+        <td class='lva_info'> Medienkonvergenz und -hybridisierung II(2013S / 1 WStd. / 1 ECTS / Seminar / S40542)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Fiel, Wolfgang Sen.Art. Dipl.-Ing. MArch. MPhil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Pr&auml;sentation am Semesterende bzw. nach Terminvereinbarung</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?6013?14.03.13?&amp;MAEy14C7&amp; ">Handke, Amina Univ.-Lekt. Mag.Art.</a></td>
+        <td class='ort'> 22.3.19.4.10.5.24.5.Freitags, 13-17hAdresse:1030 Wien, Am Heumarkt 27, 2. Stock, T&uuml;r 3A(hinter dem Akademietheater, U4 Stadtpark)</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00306</td>
+        <td class='lva_info'> System Setting-Theoretische Grundlagen audiovisueller Gestaltung(2013S / 2 WStd. / 2 ECTS / Seminar / S00306)</td>
+        <td class='descr'> Ein Konzept dient nicht nur als Voraussetzung f&uuml;r die Finanzierung eines Projekts, sondern auch als wichtige Arbeitsgrundlage f&uuml;r die Umsetzung.Welche Parameter m&uuml;ssen bedacht werden, um ein audiovisuelles k&uuml;nstlerisches Projekt zu konzipieren und umzusetzen? Wie beschreibe ich mein Thema? Was ist ein Format? In welchem Medium will ich meine Arbeit in welcher Form pr&auml;sentieren? Welches Material darf ich zu welchen Bedingungen verwenden? Welche rechtlichen Vorgaben gelten f&uuml;r mich? Wie plane ich die Produktion?Und zu guter letzt: Wie pr&auml;sentiere ich mein Projekt?Schwerpunkt im SS 2013 wird auf gemeinsamer Konzeption und Pr&auml;sentationstechniken liegen.</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Handke, Amina Univ.-Lekt. Mag.Art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 1</td>
+        <td class='nachweis'> Ablauf:Theorie-Vorlesung mit Pr&auml;sentation und Diskussion signifikanter Kunst-Werke und Projekte aus dem Bereich sound-artZiel:Pr&auml;sentation, Befragung und Diskussion von Kunstkonzepten seit den 1950er Jahren, die Sound Genre &uuml;berschreitend als bedeutsame Dimension einbeziehen.Zeugnis:auf der Basis von Anwesenheit und Beteiligung an Diskussionen sowie m&uuml;ndl. oder schriftl. &nbsp;Beantwortung von Fragen Bezug nehmend auf einzelne Themen und Werke bzw. Literatur zum Abschluss des Semesters.</td>
+        <td class='ects'> 1</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?3929?14.03.13?&amp;N1E47ua4&amp; ">Schöny, Roland Univ.-Lekt. BA</a></td>
+        <td class='ort'> Seminarraum des Instituts, jeweils Mi. 10.00 - 11.00</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00277</td>
+        <td class='lva_info'> Medienkonvergenz und -hybridisierung I(2013S / 1 WStd. / 1 ECTS / Seminar / S00277)</td>
+        <td class='descr'> Sound-Art bleibt weiterhin virulent. So die These. Nicht blo&szlig; retrospektiv als Leitmotiv in Ausstel-lungen und Paradigma in den Str&ouml;mungen der Avantgarde von Futurismus &uuml;ber Fluxus bis hin zu Neuer Elektronik. Dennoch kann in Bezug auf Sound-Art kann kaum von einem Genre gesprochen werden. So eine weitere These. Vielmehr vom Einzug des Klangs, der Komposition, des L&auml;rms oder des Ger&auml;uschs in den Kontext der bildenden Kunst. Sound in Verbindung von und Sound als Aufla-dung materieller, visueller und r&auml;umlicher Aspekte der bildenden Kunst, die als Skulptur, als Installa-tion, als Video-Film, als Projektion zu erklingen beginnt. &nbsp;Verkn&uuml;pfungen von Sound mit visuellen Konzepten als Thema aktueller Medienkultur und digitaler Produktionsweisen wird anhand signifikanter Beispiele der vergangenen Jahrzehnte verhandelt und diskutiert. Befragt werden zugleich die diskursiven R&uuml;ckbindungen Rahmenbedingungen in der Ge-genwartskunst, der akustischen und elektronischen Avantgarde wie auch der Pop- und Underground Kultur seit dem sp&auml;ten 20. Jahrhunderts.</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> F&uuml;r alle TeilnehmerInnen werden im Zuge der LV Materialien zu &auml;sthetischen, produktionstechnischen, gesellschaftlichen und theoretischen Hintergr&uuml;nden online zur Verf&uuml;gung gestellt. Empfohlen sei die VO allen, die in ihre k&uuml;nstlerische Arbeit und / oder theoretische Auseinanersetzung Sound oder Sound im Kontext visueller Konzepte einbeziehen. Die Teilnahme erfordert keine speziellen Vorkenntnisse, bringt aber Material, das auch informierten InsiderInnen neue Perspektiven er&ouml;ffnen kann.</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Schöny, Roland Univ.-Lekt. BA</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 3</td>
+        <td class='nachweis'> &bull; Beurteilung&ndash; Schriftliche Pr&uuml;fung am Semesterende (Beantwortung eines Fragenkatalogs auf der Basis des Readers und der Vorlesung).</td>
+        <td class='ects'> 3</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?355?14.03.13?&amp;eK1Q4743&amp; ">Jutz, Gabriele ao. Univ.-Prof. Mag. Dr.phil.</a></td>
+        <td class='ort'> Dienstag, 10.00 (p&uuml;nktlich) bis 12.30Dienstag, 10.00 (p&uuml;nktlich) bis 12.30, H&ouml;rsaal 4Beginn: 5. M&auml;rz&nbsp; 2013</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40370</td>
+        <td class='lva_info'> Filmavantgarde III(2013S / 3 WStd. / 3 ECTS / Vorlesungen / S40370)</td>
+        <td class='descr'> Ziel der Lehrveranstaltung ist es, verschiedene Traditionen der Filmavantgarde chronologisch vorzustellen, ihre Vielschichtigkeit sichtbar zu machen und einen Dialog zwischen ihren diversen Ausdrucksformen zu er&ouml;ffnen.Die Lekt&uuml;re kunst- und filmtheoretischer Texte soll dazu beitragen, die Filmanalysen in einem erweiterten theoretischen Kontext zu verankern. &bdquo;Filmavantgarde III&ldquo; konzentriert sich auf die Entwicklung der europ&auml;ischen und US-amerikanischen Filmavantgarden von den 1960er bis in die 1970er Jahre, was zugleich einer Bewegung vom Underground zur Institutionalisierung entspricht. Folgende Schwerpunkte stehen am Programm:&nbsp;&ndash; Andy Warhol, Jack Smith&ndash; Wiener Aktionismus&ndash; Expanded Cinema&ndash; Feministische Positionen&ndash; Structural Film&nbsp;Die Vorlesungsreihe umfasst insgesamt vier Lehrveranstaltungen, die in zyklischer Form angeboten werden. Das Gesamtpaket versteht sich als umfassende Einf&uuml;hrung in die europ&auml;ische und US-amerikanische Avantgardefilmgeschichte sowie in korrespondierende Entwicklungen im Bereich der Medienkunst.</td>
+        <td class='lvatype'> Vorlesungen</td>
+        <td class='anmerkungen'> &bull; Teilnahmevoraussetzungen&ndash; Der Besuch von Filmavantgarde I bzw. II wird nicht vorausgesetzt. Ein Einstieg ist jederzeit m&ouml;glich.&ndash; F&auml;higkeit und Bereitschaft, englischsprachige theoretische Texte zu lesen.&nbsp;</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Jutz, Gabriele ao. Univ.-Prof. Mag. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> M&uuml;ndliche Pr&uuml;fung. N&auml;chste Termine: Do, 21. 3. 2013 -- 16. 5. 2013 -- 20. 6. 2013 -- Oktober 2013 (tbc). -- Pr&uuml;fungsstoff: Bilder aus der Vorlesung (siehewww.architekturgeschichte.at) plus Lekt&uuml;re eines Textes zum Thema der Vorlesung nach Wahl (Literatur im Handapparat in der Universit&auml;tsbibliothek und eigene Recherche)</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?37?14.03.13?&amp;14743287&amp; ">Boeckl, Matthias ao. Univ.-Prof. Mag.phil. Dr.phil.</a></td>
+        <td class='ort'> JedenDonnerstag 12-13.30h, Seminarraum B, Dachgescho&szlig;, Fersteltrakt.BEGINN: Do, 7. M&auml;rz 2013</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S10224</td>
+        <td class='lva_info'> Geschichte und Theorie der Architektur(2013S / 2 WStd. / 2 ECTS / Vorlesungen / S10224)</td>
+        <td class='descr'> Alle Themen/Termine tbc!&nbsp; 7.3.13: Kontinuit&auml;t 1, Wiederaufbau &amp; Identit&auml;t: Kulturbauten und Infrastruktur &ndash; 14.3.13: Kontinuit&auml;t 2, Haerdtl, Fellerer, Boltenstern, Niedermoser &ndash; 21.3.13: Roland Rainer &ndash; 11.4.13: Holzmeisterschule, Konstruktive Moderne, Uhl &amp; Kirche als Bauherr 1945-65 &ndash; 18.4.13: Funktionalismuskritik 1, Ursprungssuche um 1960 &ndash; 25.4.13: Funktionalismuskritik 2, Module, Strukturen, Space Technology &ndash; 2.5.13: Funktionalismuskritik 3, Individualisierung &amp; Konsum &ndash; 16.5.13: Postmoderne: Hollein und die New York Five &ndash; 23.5.13: Neomoderne: Krischanitz, Basler Schule, Das Salzburg-Experiment ab 1980 &ndash; 30.5.13: Deconstructivist Architecture 1988 &ndash; 6.6.13: Themen der Architektur nach 1988 &ndash; 13.6.13: Zusammenfassung &ndash; 20.6.13: M&uuml;ndliche Pr&uuml;fung</td>
+        <td class='lvatype'> Vorlesungen</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Boeckl, Matthias ao. Univ.-Prof. Mag.phil. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> </td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?3681?14.03.13?&amp;1E474x3t&amp; ">Passath, Nikolaus Univ.-Lekt. Mag.art.</a></td>
+        <td class='ort'> Montags 13:00 - 14:30Expositur Sterngasse&nbsp;</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40531</td>
+        <td class='lva_info'> Interface Design II(2013S / 2 WStd. / 2 ECTS / Seminar / S40531)</td>
+        <td class='descr'> genaue Inhalte werden noch bekanntgegeben</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Passath, Nikolaus Univ.-Lekt. Mag.art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Anwesenheit/ Aktivit&auml;t im Seminar</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?4660?14.03.13?&amp;1u474327&amp; ">Spohn, Anna Margareta Sen.Sc. Mag.art. Dr.phil.</a></td>
+        <td class='ort'> &nbsp;Fortsetzung des Seminars vom Wintersemester, bei Neueinstieg bitte um Anmeldung per Email: anna.spohn@uni-ak.ac.at oder boris.manner@uni-ak.ac.atfindet imSeminarraum Kulturgeschichte(Kultur- und Geistesgeschichte,&nbsp;Expositur Franz-Josefs-Kai 5,&nbsp;A-1010 Wien) statt</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00180</td>
+        <td class='lva_info'> Farbe Sprache Blick(2013S / 2 WStd. / 2 ECTS / Seminar / S00180)</td>
+        <td class='descr'> Die Lehrveranstaltung wird in Zusammenarbeit mit Boris Manner gestaltet.Eckpunkte des Diskurses sind die "Bemerkungen &uuml;ber die Farben" von L. Wittgenstein (in : Ludwig Wittgenstein: &Uuml;ber Gewi&szlig;heit, stw, Frankfurt/Main 1984) und die Bemerkungen von M. Merleau-Ponty in seiner "Ph&auml;nomenologie der Wahrnehmung" (de Gruyter, Berlin 1966). Den "k&uuml;nstlerischen" Positionen / Konzepten von Josef Albers, Auguste Herbin und Johannes Itten wird im Seminar ebenso gro&szlig;e Aufmerksamkeit gewidmet werden.</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Spohn, Anna Margareta Sen.Sc. Mag.art. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 1</td>
+        <td class='nachweis'> wird in der ersten LV bekannt gegeben</td>
+        <td class='ects'> 1</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?4761?14.03.13?&amp;1f47a432&amp; ">Pontiller, Julia Maria Univ.-Lekt. Dr.phil. Mag.art.</a></td>
+        <td class='ort'> Mi. 10.04.2013 - 09:00 bis 13:30 | H&ouml;rsaal 2Mo. 06.05.2013 - 09:00 bis 13:30 | H&ouml;rsaal 1Mo. 13.05.2013 - 09:00 bis 13:30 | H&ouml;rsaal 1Mi.&nbsp; 15.05.2013 - 09:00 bis 14:00 | H&ouml;rsaal 2Mo. 03.06.2013 - 09:00 bis 13:30 | H&ouml;rsaal 1</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00200</td>
+        <td class='lva_info'> Autobiografie, Kunst und Film(2013S / 1 WStd. / 1 ECTS / Seminar / S00200)</td>
+        <td class='descr'> Sowohl in der Kunst- als auch in der Filmwelt flie&szlig;t die Autobiographie des K&uuml;nstlers oder Filmemachers in irgendeiner Form&nbsp;stets in das Kunstwerk ein. Die Lehrveranstaltung setzt sich nun mit Autobiographien, seien sie verborgen oder direkt sichtbar auseinander, und versucht einen Zusammenhang zwischen dem Kunstwerk und den Autobiographien der K&uuml;nstlerInnen transparent werden zu lassen. Schwerpunkt werden Filmbetrachtungen sein, ihre k&uuml;nstlerischen Umsetzungen sowie die verschiedenen filmischen Darstellungen von Autobiographien. Dieser Thematik wird an Hand von Filmbeispielen, Impulsreferaten, Filmanalysen, Gruppenarbeiten und Diskussionen nachgegangen werden.</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> Wir bitten alle, die an dieser LV teilnehmen wollen,sich per email&nbsp;Anna-ixy@gmx.at&nbsp;anzumelden!Wir ersuchen alle um eine kontinuierliche Anwesenheit in der LV!!!Wer zu einem der Termine nicht kommen kann, bitte uns dies vorher per a mail bekannt zu geben!!!Wir freuen uns auf Ihr Kommen und auf eine spannende gemeinsame Arbeit! :-)</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Pontiller, Julia Maria Univ.-Lekt. Dr.phil. Mag.art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Regelm&auml;&szlig;ige Anwesenheit, Mitarbeit, Referat und dessen Abgabe in schriftlicher Form (bis 15. August 2013) sind die Bedingungen zur erfolgreichen Teilnahme an dem Seminar.</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?89?14.03.13?&amp;ya147jn4&amp; ">Geretsegger, Sophie-Marie AProf Mag.phil.</a></td>
+        <td class='ort'> Abhaltung:&nbsp;w&ouml;chentlichTermin:&nbsp;Mittwoch, 16-17:30 UhrBeginn:&nbsp;Mittwoch, 13. M&auml;rz 2013, 16-17:30 Uhr, H&ouml;rsaal 3 (Neubau, Erdgescho&szlig;)Ort:&nbsp;H&ouml;rsaal 3</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S51085</td>
+        <td class='lva_info'> Kriegskunst(2013S / 2 WStd. / 2 ECTS / Seminar / S51085)</td>
+        <td class='descr'> Ich m&ouml;chte mit den Teilnehmerinnen erarbeiten, ob und wie gegenw&auml;rtige K&uuml;nstlerinnen mit gegenw&auml;rtigen Kriegen umgehen. Kriege von denen es mehr gibt, als wir auch nur ahnen. Aber auch mit Umg&auml;ngen aus fr&uuml;heren Zeiten vergleichen, Zeiten in denen uns das Kriegsgeschehen aus dem Geschichtsunterricht und aus heutiger Sicht viel &uuml;berschaubarer erscheint. Was haben m&ouml;glicherweise Historienmalerei, Heldenverherrlichung, Allegorische Eroberungsdarstellungen, Antikriegskunst, Berichterstattung, aus dem 19./20. Jh. oder dem 12. Jh. mit uns zu tun?</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> Teilnahmevoraussetzungen:Nachweis &uuml;ber den positiven Abschluss von 1 Vorlesung + 2 Proseminaren in Kunstgeschichte oder anderen geisteswissenschaftlichen F&auml;chern; eigenst&auml;ndiges wissenschaftliches Arbeiten wird vorausgesetztEin Handapparat steht zur Unterst&uuml;tzung in der Bibliothek zur Verf&uuml;gung, deckt aber nicht den gesamten Bedarf an Literatur ab, sondern soll Ansto&szlig; zu weiterem Forschen sein.</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Geretsegger, Sophie-Marie AProf Mag.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Schriftlich oder m&uuml;ndlich Ende jedes Semesters.</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?62?14.03.13?&amp;14SMuW7U&amp; ">Elias, Marion ao. Univ.-Prof. Dr.phil. Mag.art.</a></td>
+        <td class='ort'> Erste LV (Vorbesprechung):&nbsp;Donnerstag, 21. M&auml;rz 2013, 14.00h c. t.,&nbsp;Seminar dann ab 11. April 2013 jeweils Donnerstags, 14.00h c. t. - 15.30h,H&Ouml;RSAAL 24, EXPOSITUR DER ANGEWANDTEN VORDERE ZOLLAMTSTRASSE, ZWISCHENGESCHOSS&nbsp;NEUEINSTIG IM SOMMERSEMESTER 2013 M&Ouml;GLICH&nbsp;</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40374</td>
+        <td class='lva_info'> Niemandsland - zwischen Kunst und Wissenschaft(2013S / 2 WStd. / 2 ECTS / Seminar / S40374)</td>
+        <td class='descr'> &bdquo;Niemandsland; zwischen Kunst und Wissenschaft&rdquo;Sch&ouml;n ist, was sch&ouml;n ist...? (Philosophie, Seminar, zweist&uuml;ndig)Die Frage, ob (bildende) Kunst Wissenschaft w&auml;re, pr&auml;ziser gefasst, ob Malerei eine Art von Wissenschaft sei beziehungsweise welches denn der ach so gravierende Unterschied zwischen den beiden Bereichen zu sein hat, zieht sich durch die ganze &bdquo;Geschichte der Bilder&ldquo;.Sind denn nun Kunstproduzenten ausschlie&szlig;lich &bdquo;bauchfokkussiert&ldquo; und ist Erkenntnis an Mikroskope und Laboratorien gebunden?In der Lehrveranstaltung soll ein immer noch brisanter Themenkreis, der schlie&szlig;lich einen Unterton von &ldquo;Minderwert&rdquo; und Mehrwert&rdquo; transportiert, anhand &bdquo;klassischer&ldquo; Formulierungen aus der Kunsttheorie und Kunstpraxis kritisch &uuml;berpr&uuml;ft sowie aktuellen Positionen gegen&uuml;bergestellt werden. Blickrichtung dabei bleibt vor allem das Interesse bildender K&uuml;nstlerInnen, sich in einer text- und kontextlastigen Szene heute auch w&ouml;rtlich - behaupten zu k&ouml;nnen.Im Studienjahr 2012/13 wird einer Motivkette zwischen philosophischer, &auml;sthetischer und k&uuml;nstlerischer "Position" des Rinascimento (Renaissance) besonderer Augenmerk geschenkt, wobei generell der Begriff &ldquo;&Auml;sthetik&rdquo; - auch und gereade in kontempor&auml;rer Ausrichtung - zur &Uuml;berpr&uuml;fung ansteht. Weiters soll die &uuml;ber Jahreszahlen festgelegte "Termindefinierung" der Epoche ebenso kritisch betrachtet werden wie das angeblich so d&uuml;stere Mittelalter davor. Seitenthemen wie die modisch gewordenen &ldquo;k&uuml;nstlerische Forschung&rdquo; oder das Problem des &ldquo;europ&auml;ischen Blicks&rdquo; geh&ouml;ren ebenso zu den anstehenden Themen.Einer der Kernpunkte ist - ganz nebenbei - die simple Frage: Philosophie - f&uuml;r K&uuml;nstlerInnen - wozu? Was ist das "offene Kunstwerk" und bedeutet denken immer nach-denken?Und: Niemandsland ist der Bereich zwischen feindlichen Linien &ndash; ein Gebiet, das &ndash; nirgends &ndash; dazugeh&ouml;rt.Das Seminar hat zwar seit einiger Zeit ein- und denselben Titel, die Inhalte sind allerdings je ver&auml;ndert, mag sein sogar "neu".&nbsp;&nbsp;&nbsp;</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> &nbsp;Anmeldungen ab sofort unterirene.gerersdorfer@uni-ak.ac.at &nbsp;robert.maierhofer@uni-ak.ac.atmarion.elias@uni-ak.ac.at&nbsp;&nbsp;</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Elias, Marion ao. Univ.-Prof. Dr.phil. Mag.art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?5542?14.03.13?&amp;q1u4ekw7&amp; ">Fiel, Wolfgang Sen.Art. Dipl.-Ing. MArch. MPhil.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40573</td>
+        <td class='lva_info'> Code & Repräsentation III(2013S / 2 WStd. / 2 ECTS / Seminar / S40573)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Fiel, Wolfgang Sen.Art. Dipl.-Ing. MArch. MPhil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?413?14.03.13?&amp;1uw47Gy4&amp; ">Schnell, Veronika VAss. Mag. phil.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S30222</td>
+        <td class='lva_info'> Grammatik und Architektur neuer Medien IV(2013S / 2 WStd. / 2 ECTS / Seminar / S30222)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Schnell, Veronika VAss. Mag. phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 3</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 3</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?164?14.03.13?&amp;14743fjV&amp; ">Kopf, Wilhelm AProf. akad. Bildh.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40510</td>
+        <td class='lva_info'> Fertigungstechniken für Installationen - Projektarbeiten II(2013S / 3 WStd. / 3 ECTS / Seminar / S40510)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Kopf, Wilhelm AProf. akad. Bildh.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> m&uuml;ndliche und schriftliche Arbeit (Abgabe bis 15. August 2013)</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?6123?14.03.13?&amp;14743R2T&amp; ">Kernbauer, Eva Univ.-Prof. Mag.phil. Dr.phil.</a></td>
+        <td class='ort'> Abhaltung:&nbsp;geblocktBeginn:Mittwoch, 13. M&auml;rz 2013, 13-14:30 Uhr, H&ouml;rsaal&nbsp;4 (Altbau, 1. Stock)&nbsp;Termine:13. M&auml;rz 2013, 13:00-14:30 Uhr, HS 4&nbsp;20. M&auml;rz 2013, 13:00-15:00 Uhr,&nbsp;Ausstellungsbesuche (MUMOK, Secession)10. April 2013, 13:00-16:00 Uhr,&nbsp;HS424. April 2013, 13:00-16:00 Uhr,&nbsp;HS408. Mai 2013, 13:00-16:00 Uhr,&nbsp;HS415. Mai 2013, 13:00-16:00 Uhr,&nbsp;HS 429. Mai 2013, 13:00-16:00 Uhr,HS 4</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00283</td>
+        <td class='lva_info'> Die Moderne in der Gegenwartskunst(2013S / 2 WStd. / 2 ECTS / Seminar / S00283)</td>
+        <td class='descr'> Die Kunst der Moderne stellt eine reiche Hinterlassenschaft f&uuml;r die gegenw&auml;rtige Kunstproduktion dar. Die mit ihrer Historisierung als kulturelle und k&uuml;nstlerische Epoche einhergehende Auseinandersetzung geschieht dabei ebenso h&auml;ufig &uuml;ber als zentral angenommene Qualit&auml;ten und Charakteristika des Modernismus (&auml;sthetische Autonomie, Formalismus, Selbstbez&uuml;glichkeit, Individualit&auml;t, Expressionismus, Abstraktion) wie &uuml;ber die Herausarbeitung ihrer blinden Flecke (Kolonialismus, Eurozentrismus, Kapitalismus, &Uuml;berh&ouml;hung von Originalit&auml;t und genialischer Subjektivit&auml;t, Marginalisierung weiblicher Kunstproduktion).Die Arbeit am Modernismus stellt eine Arbeit mit unterschiedlichen k&uuml;nstlerischen, theoretischen und kunsthistoriographischen Ebenen dar, die immer auf gegenw&auml;rtige k&uuml;nstlerische Fragestellungen bezogen sind. So ist die k&uuml;nstlerische Auseinandersetzung mit der Moderne nicht einfach mit einer kunsthistorischen Aufarbeitung gleichzusetzen &ndash; auch wenn sie diese erweitern mag &ndash;, sondern ist letztlich eine Aneignung und Parteinahme im Sinne der Nutzung &auml;sthetischer Potentiale f&uuml;r die Gegenwart.In Verbindung mit dem Seminar sind Ausstellungsbesuche geplant. Die Bereitschaft zu Textlekt&uuml;re und Diskussion ist Voraussetzung zur Teilnahme am Seminar.Literaturempfehlungen:Inke Arns/Walter Benjamin, What is modern Art? Kat. K&uuml;nstlerhaus Bethanien, 2006.Yve-Alain Bois, &bdquo;Painting. The Task of Mourning&ldquo;, in: ders., Painting as Model, Cambridge, Mass./London 1990, S.&thinsp;229&ndash;244.Sabine Breitwieser (Hg.), Modernologies, Contemporary Artists Researching Modernity and Modernism, Kat. MACBA, Barcelona, 2009.Yilmaz Dziewior (Hg.), Formalismus. Moderne Kunst, heute, Kat. Kunstverein Hamburg, Ostfildern-Ruit: Hatje Cantz, 2004.Sabine Folie (Hg.), Die Moderne als Ruine. Eine Arch&auml;ologie der Gegenwart, Kat. Generali Foundation, Wien, 2009.Charles Harrison, &bdquo;Modernism&ldquo;, in: Critical Terms for Art History, S. 188-201.Kobena Mercer, &bdquo;Art History after Globalization: Formations of the Colonial Modern&ldquo;, in: Tom Avermaete, Serhat Karakayali, Marion von Osten, Colonial Modern. Aesthetics of the Past &ndash; Rebellions for the Future, London 2010, S. 233-242Avigail Moss, Kerstin Stakemeier (Hgg.), Painting. The Implicit Horizon, Maastricht: Jan van Eyck 2012.Christian Philipp M&uuml;ller, Vergessene Zukunft, Kat. Kunstverein M&uuml;nchen, M&uuml;nchen und Graz 1992.Andre Rottmann, Reflexive Bezugssysteme. Ann&auml;herungen an den "Referenzialismus" in der Gegenwartskunst, in: Texte zur Kunst, 71, September 2008, 79-94Viktoria Schmidt-Linsenhoff, &Auml;sthetik der Differenz. Postkoloniale Perspektiven vom 16. bis 21.&nbsp;Jahrhundert, Marburg: Jonas, 2010.Georg Sch&ouml;llhammer, Modernity? K&ouml;ln: Taschen, 2007.Wolfgang Welsch, Unsere postmoderne Moderne, Weinheim 1987.</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> Teilnahmevoraussetzungen:Nachweis &uuml;ber den positiven Abschluss von 1 Vorlesung + 2 Proseminaren in Kunstgeschichte, Kulturgeschichte oder Philosophie; eigenst&auml;ndiges wissenschaftliches Arbeiten wird vorausgesetzt.Regelm&auml;&szlig;ige Anwesenheit (maximales Fehlen: 2 Einzelsitzungen oder 1 Doppelsitzung), &Uuml;bernahme eines Referats und Abgabe der schriftlichen Arbeit, und die Bereitschaft zu Lekt&uuml;re und Diskussion sind Voraussetzung zur erfolgreichen Teilnahme.Keine Voranmeldung n&ouml;tig.In der ersten Seminarstunde werden die Referatsthemen vergeben und der Ablauf des Seminars vorgestellt.</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Kernbauer, Eva Univ.-Prof. Mag.phil. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 4</td>
+        <td class='nachweis'> regelm&auml;&szlig;ige Anwesenheitaktive Mitarbeit an den Textprojekten und Gespr&auml;chenTexterstellung</td>
+        <td class='ects'> 4</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?259?14.03.13?&amp;14ME743e&amp; ">Schmatz, Ferdinand Univ.-Prof. Dr.phil.</a></td>
+        <td class='ort'> jeweilsDonnerstag 14.00 - 18.00ab 14.03. 2013Institutsr&auml;ume f&uuml;r &nbsp;Sprachkunst1030 WienVordere Zollamtstra&szlig;e 3</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S30411</td>
+        <td class='lva_info'> Textprojekte, Essays und wissenschaftliches Arbeiten(2013S / 4 WStd. / 4 ECTS / Seminar / S30411)</td>
+        <td class='descr'> Quer durch II:Textprojekte in den diversen Bereichen des k&uuml;nstlerischen Wissenserwerbs.&nbsp;&ndash; Individuelle Textberatung von aktuellen Texten zu Semesterthemen, vorrangig&nbsp;&nbsp; Beschreibung der eigenen Arbeiten&ndash; Diplomarbeiten und Dissertationen (Impulsanregungen, Themenstellungen etc.)&nbsp;&nbsp;</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> Praxisorientierte DialogeGruppenintensiver AustauschMedien&uuml;bergreifender Textbegriff</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Schmatz, Ferdinand Univ.-Prof. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 13</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 8,27</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?266?14.03.13?&amp;14742rht&amp; ">Schnell, Ruth  Univ.-Prof. Mag.art.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40602</td>
+        <td class='lva_info'> ZKF - Digitale Kunst(2013S / 13 WStd. / 8,27 ECTS / Künstl. Einzelunterricht / S40602)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Künstl. Einzelunterricht</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Schnell, Ruth  Univ.-Prof. Mag.art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?2810?14.03.13?&amp;1vBr4tz7&amp; ">Jahrmann, Margarete  Sen.Lect. Mag.art. Dr.phil.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00282</td>
+        <td class='lva_info'> Human Interface Design(2013S / 2 WStd. / 2 ECTS / Seminar / S00282)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Jahrmann, Margarete  Sen.Lect. Mag.art. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> M&uuml;ndliche Pr&uuml;fung am Ende des Semesters!</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?2624?14.03.13?&amp;147ku432&amp; ">Holzer, Walter Gastprof. Dipl.-Ing.</a></td>
+        <td class='ort'> Abteilung KUNST UND WISSENSTRANSFERExpositur: 1010 Wien, Postgasse 6 ,2. Stock, SeminarraumSeminarstart: 05. M&auml;rz 2013Dienstag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 05.03.2013 &nbsp;&nbsp;&nbsp; 17.00 - 19.00 UhrDienstag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12.03.2013 &nbsp;&nbsp;&nbsp; 17.00 - 19.00 Uhr -NEUER TERMIN!Dienstag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19.03.2013 &nbsp;&nbsp;&nbsp; 17.00 - 19.00 Uhr-Termin&auml;nderung!Dienstag &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 09.04.2013 &nbsp;&nbsp;&nbsp; 17.00 - 19.00 UhrDienstag &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16.04.2013 &nbsp;&nbsp;&nbsp; 17.00 - 19.00 UhrDienstag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23.04.2013 &nbsp;&nbsp;&nbsp; 17.00 - 19.00&nbsp; UhrDienstag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30.04.2013 &nbsp;&nbsp;&nbsp; 17.00 - 19.00 UhrDienstag &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 07.05.2013 &nbsp;&nbsp;&nbsp; 17.00 - 19.00 UhrDienstag&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 14.05.2013 &nbsp; &nbsp; 17.00 - 19.00 UhrDienstag&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 28.05.2013 &nbsp; &nbsp; 17.00 - 19.00 Uhr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;weitersDienstag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 04.06.2013 &nbsp; &nbsp; 17.00 - 19.00 UhrDienstag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11.06.2013 &nbsp;&nbsp;&nbsp; 17.00 - 19.00 UhrDienstag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18.06.2013 &nbsp; &nbsp; 17.00 - 19.00 Uhr -Pr&uuml;fungsterminDienstag &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25.06.2013 &nbsp;&nbsp;&nbsp; 17.00 - 19.00 Uhr -Pr&uuml;fungstermin&nbsp;&Auml;nderungen werden m&uuml;ndlich und durch Aushang in der Aula im Hauptgeb&auml;ude bekanntgegeben.</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S30408</td>
+        <td class='lva_info'> Gewerblicher Rechtsschutz - Vertiefung(2013S / 2 WStd. / 2 ECTS / Seminar / S30408)</td>
+        <td class='descr'> GEWERBLICHER RECHTSSCHUTZ II - Beratung, Fallbeispiele aus der angewandten Kunst, Internationales Recht&nbsp;LehrinhaltDie Lehrveranstaltung besch&auml;ftigt sich mit dem Gewerblichen Rechtsschutz unter besonderer Ber&uuml;cksichtigung von Werken der angewandten Kunst. Der Gewerbliche Rechtsschutz geh&ouml;rt zum sogenannten Geistigen Eigentum, das auch das Urheberrecht umfa&szlig;t und bezieht sich auf das Patentrecht, das Gebrauchsmusterrecht, das Geschmacksmusterrecht (Design), das Markenrecht und andere. Zum Urheberrecht gibt es &Uuml;berschneidungen, weil gegebenenfalls Doppelschutz bestehen kann, z. B. bei Designs. Die gewerblichen Schutzrechte sind Verbotsrechte. Als Eigentumsrechte sind sie &uuml;bertragbar und lizensierbar.&nbsp;LehrzielDas Ziel der Lehrveranstanstaltung besteht darin, den Studierenden gewerbliche Schutzrechte und deren wirtschaftliche Umsetzung in detaillierter Form und an Hand von tats&auml;chlichen Entscheidungen nahezubringen.Er&ouml;rtert wird im Rahmen der Lehrveranstaltung auch die rechtliche Situation von Studierenden, die im Rahmen von Wettbewerben u. dgl. t&auml;tig werden, weil nicht alle Ausschreibungsunterlagen in klarer Form auf das geistige Eigentum R&uuml;cksicht nehmen. Die Studierenden sollen darauf achten, welche Unterlagen sie aus der Hand geben, wenn sie beispielsweise einem Unternehmen eine Sch&ouml;pfung zur Verwertung anbieten, welche Vorbehaltstexte anzubringen sind, wie lange die Erfindung oder Sch&ouml;pfung geheimzuhalten ist, usw.Praktische Probleme von Studierenden werden als Fallbeispiele dann diskutiert, wenn von Seiten des Betreffenden kein Einwand dagegen besteht. Nat&uuml;rlich sind gegebenenfalls Einzelgespr&auml;che m&ouml;glich, die auch mit Beratung verbunden sind. Dann handelt es sich um eine kostenlose erstanwaltliche Beratung.&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> Die Lehrveranstaltung ist geeignet f&uuml;r jede Fachrichtung. - Anmeldungen f&uuml;r Beratungen sind jederzeit m&ouml;glich!</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Holzer, Walter Gastprof. Dipl.-Ing.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 1</td>
+        <td class='nachweis'> Schriftlich, muendlich, kuenstlerische Arbeit</td>
+        <td class='ects'> 1</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?62?14.03.13?&amp;mc14g7e4&amp; ">Elias, Marion ao. Univ.-Prof. Dr.phil. Mag.art.</a></td>
+        <td class='ort'> &nbsp;Erste LV (Vorbesprechung):&nbsp;Donnerstag, 17. M&auml;rz &nbsp;2011, 12.00h c. t.,&nbsp;Seminarraum Abteilung Philosophie, 1010, Postgasse 6, 2. Stock&nbsp;Vorlesung dann ab 24.M&auml;rz 2011 jeweils Donnerstags, 12.00h c. t. - 13.00h,Seminarraum Abteilung Philosophie, 1010, Postgasse 6, 2. Stock&nbsp;Erste LV (Vorbesprechung):&nbsp;Donnerstag, 21. M&auml;rz &nbsp;2013, 12.00h c. t.H&Ouml;RSAAL 24, EXPOSITUR DER ANGEWANDTEN VORDERE ZOLLAMTSTRASSE, ZWISCHENGESCHOSSnach der Portiersloge LINKS in den Gang zu Aufzug, ZG dr&uuml;cken: Der Raum ist direkt vis-&agrave;-vis vom Lift, verwirrenderweise steht aber 13 und 31 drauf; Hinweisplakate werden angebracht!Vorlesung dann ab 11. April 2013 jeweils Donnerstags, 12.00h c. t. - 13.00hH&Ouml;RSAAL 24, EXPOSITUR DER ANGEWANDTEN VORDERE ZOLLAMTSTRASSE, ZWISCHENGESCHOSS&nbsp;&nbsp;</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S50844</td>
+        <td class='lva_info'> Gender Studies: Bildende Kunst und Philosophie - Acheiropoieta(2013S / 1 WStd. / 1 ECTS / Vorlesungen / S50844)</td>
+        <td class='descr'> Lange vor der "Erfindung" des - angeblich autonomen - Kunstwerks, vor dem Aufstieg des simplen Handwerkers zum artista waren Bilder vom Himmel gefallene Dinge, Acheiropoieta, nicht von Menschenh&auml;nden gemachte Verl&auml;ngerungen Gottes in die Welt. Die Aufgaben der bildendenKunst zeigen sich seitdem aber nur marginal und oberfl&auml;chlich ver&auml;ndert, selbst die klassische Moderne und die Avantgarden des vergangenen Jahrhunderts r&uuml;ckten gespickt mit Heilsversprechen an oder tauschten religi&ouml;se gegen politische Pflichten. In der kontempor&auml;ren Kunst ist das &auml;sthetische zur Nebensache geworden, weitgehend irrelevant oder &uuml;berfluessig, daf&uuml;r stellt sich nun umso gr&ouml;esser ein ganzer Aufgabenkatalog als unhintergehbare Existenzberechtigung vor jedwede m&ouml;gliche optische L&ouml;sung. S&auml;mtliche Entpflichtungsm&ouml;glichkeiten scheinen der Kunst und den K&uuml;nstlern in die falsche Kehle zu geraten, missverstanden als Beginn der eigenen Abschaffung, stets beantwortet mit angeblich neuen, selbstgewaehlten Bindungen, Diensten und Bestimmungen, die &uuml;ber das Medium kaum zu l&ouml;sen sein k&ouml;nnen und auch gar nicht gel&ouml;st werden m&uuml;ssten beziehungsweise sollten.Wie stellt sich denn nun die "Kette" von Bildender Kunst und Philosophie - aus einem genderspezifischen Blickwinkel aus - dar, aktuell und historisch? Finden sich zu den Themenkreisen &ldquo;Bilder versus Bilderverbot, Kult oder Kunst, Zeichen oder Magie, Geniekult oder Irrtum&rdquo; lediglich aus europ&auml;ischer Sicht Anhaltspunkte und wenn ja beziehungsweise nein - welche? Und was ist mit der Lieblingssentenz der letzten Zeit, der k&uuml;nstlerischen Forschung? Geht das &uuml;berhaupt - und wenn ja, wie? Was wir eigentlich als &ldquo;Kult&rdquo; begreifen hat seine Parallelen im au&szlig;ereurop&auml;ischen Raum durchgehend behalten, und in Zeiten, die uns mit einer vehementen R&uuml;ckkehr des Religi&ouml;sen quasi weltweit konfrontieren schein es durchaus angebracht, das System der &ldquo;Aufkl&auml;rung&rdquo; neuerlich in Erinnerung zu rufen und gegebenenfalls zu kritisieren. Dies sowie parallele Fragen sollen in der Lehrveranstaltung bearbeitet werden.Ziel der Vorlesung ist es, den Blickwinkel zwischen Vergangenheit und Gegenwart abwechselnd einzurichten, einerseits die Positionen des K&uuml;nstlers/der K&uuml;nstlerin und seiner/ihrer Arbeiten zwischen Beschw&ouml;rung, Belehrung, Erz&auml;hlung, Devotion, Repr&auml;sentation oder Verst&ouml;rung zu verfolgen und zu beleuchten, andererseits die Rolle dieses &bdquo;artista &ldquo; selbst im historischen und sozialen Wandel zu pr&uuml;fen und, nicht zuletzt, sie zur Rolle, die je zeitgen&ouml;ssische Frauen in Wissenschaft und Kunst spielen konnten und mu&szlig;ten, vergleichend in Zusammenhang zu bringen. Die Beispielkette um die Aufgabe der bildenden Kunst zieht dabei auch au&szlig;ereurop&auml;ische Muster heran und analysiert prinzipiell Lesarten dessen, was als &bdquo;Kunstwerk&ldquo; verstanden wird. Quasi als Resultat der Lehrveranstaltung wird von den Teilnehmerinnen und Teilnehmern eine Auslegung des erarbeiteten Themenkreises in (kurzer) wissenschaftlich-schriftlicher oder praktisch-k&uuml;nstlerischer erwartet.Die Vorlesungsserie steht in lockerer Verbindung zum Gender Art Laboratory</td>
+        <td class='lvatype'> Vorlesungen</td>
+        <td class='anmerkungen'> &nbsp;Anmeldungen ab sofort unter&nbsp;irene.gerersdorfer@uni-ak.ac.atmarion.elias@uni-ak.ac.at, oder in der Lehrveranstaltung.Anmeldungen ab sofort unter&nbsp;irene.gerersdorfer@uni-ak.ac.atrobert.maierhofer@uni-ak.ac.atmarion.elias@uni-ak.ac.at&nbsp;&nbsp;&nbsp;</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Elias, Marion ao. Univ.-Prof. Dr.phil. Mag.art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Individuelle Beurteilung nach Fortschritt der wissenschaftlichen Arbeit.</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?37?14.03.13?&amp;G1euS4K7&amp; ">Boeckl, Matthias ao. Univ.-Prof. Mag.phil. Dr.phil.</a></td>
+        <td class='ort'> B&uuml;ro Matthias Boeckl, Dachgescho&szlig;, Fersteltrakt (Altbau), jeden Donnerstag 10.30 h bis 12 h, Beginn: voraussichtlich 14. 3. 2013</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S10225</td>
+        <td class='lva_info'> Geschichte und Theorie der Architektur. Integration/DiplomandInnenseminar(2013S / 2 WStd. / 2 ECTS / Seminar / S10225)</td>
+        <td class='descr'> Wissenschafltiche Diskussion und Beratung laufender Diplomarbeiten (Lehramt u.a.) und Vordiplome (Mastercurriculum Architektur, Integrationsprojekt 5. Semester.</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Boeckl, Matthias ao. Univ.-Prof. Mag.phil. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Schriftliche Arbeit</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?3675?14.03.13?&amp;dZk14g74&amp; ">Reininger, Alice Sen.Sc. Mag.art. Dr.phil.  MAS</a></td>
+        <td class='ort'> Seminarraum Franz Josefs-Kai 5/9Pers&ouml;nliche Anmeldung in der ersten Lehrveranstaltung am Dienstag, 12. M&auml;rz 2013, 17.00 Uhr</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S51034</td>
+        <td class='lva_info'> Diplomarbeit oder Dissertation - ein konstruktiver Konflikt(2013S / 2 WStd. / 2 ECTS / Seminar / S51034)</td>
+        <td class='descr'> Diplomarbeit oder Dissertation - ein konstruktiver KonfliktSeminar, 2 Std.Eine Diplomarbeit oder Dissertation beinhalten Planung, Organisation und Kontrolle von verschiedenen Prozessen. Ziel dieses Seminars ist die Definition, Beschreibung und Optimierung von Prozessen, die f&uuml;r die Erstellung einer Diplomanrbeit oder Dissertation unerl&auml;sslich sind. Miteingeschlossen sind Mechanismen und Formensprache einer wissenschaftlichen Arbeit, die schriftliche Umsetzung, die wissenschaftliche Kultur.</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Reininger, Alice Sen.Sc. Mag.art. Dr.phil.  MAS</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 3</td>
+        <td class='nachweis'> Konzeptentwicklung, Gruppendiskussion, Teilnahme an der Pr&auml;sentation</td>
+        <td class='ects'> 3</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?177?14.03.13?&amp;w1E4u743&amp; ">Lampalzer-Oppermann, Gerda Sen.Lect. Dr.phil.</a></td>
+        <td class='ort'> Einf&uuml;hrung und regelm&auml;&szlig;ige Treffen, Donnerstag 14:00 Uhr,Seminarraum Medientheorie, 1030, Am Heumarkt 27, Bl&ouml;cke nach Vereinbarung.1. Termin: 14. M&auml;rz 2013, 14:00 Uhr</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40492</td>
+        <td class='lva_info'> Konzepte audiovisueller Medienproduktion II(2013S / 3 WStd. / 3 ECTS / Seminar / S40492)</td>
+        <td class='descr'> Im Studienjahr 2012/2013 besch&auml;ftigt sich das Seminar mit dem Thema Utopie versus Dystopie. Es wird die Frage gestellt, ob in einer global durchkalkulierten Welt Utopien &uuml;berhaupt noch eine angemessene Denkkategorie darstellen oder ob Zukunftsvisionen eher in dystopische Endzeitentw&uuml;rfe m&uuml;nden. Dazu soll zun&auml;chst nach historischen oder zeitgen&ouml;ssischen Beispiele f&uuml;r utopische Konzepte oder dystopische Visionen in Kunst und Wissenschaft gesucht werden, im zweiten Semester wird dann eine eigene k&uuml;nstlerisch/forscherische Arbeit realisiert.Das recherchierte Material aus dem ersten Semester wird im zweiten Semester f&uuml;r eine&nbsp;Pr&auml;sentation aufbereitet.Ein Einstieg f&uuml;r neue TeilnehmerInnen ist m&ouml;glich&nbsp;</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Lampalzer-Oppermann, Gerda Sen.Lect. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?2807?14.03.13?&amp;b1T4Z743&amp; ">Lachmayer-Felderer, Brigitte Sen.Lect. Mag. phil.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00168</td>
+        <td class='lva_info'> Artful Science IV(2013S / 2 WStd. / 2 ECTS / Seminar / S00168)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Lachmayer-Felderer, Brigitte Sen.Lect. Mag. phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 1</td>
+        <td class='nachweis'> schriftliche Pr&uuml;fung2.Pr&uuml;fungstermin f&uuml;r WS 2012/13: Mittwoch 13.03.2013, 15.00, HS 1 (Fersteltrakt, Angewandte)</td>
+        <td class='ects'> 1</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?38?14.03.13?&amp;14gU7c43&amp; ">Bönsch, Anna Maria Univ.-Lekt. Dr. phil.</a></td>
+        <td class='ort'> Fersteltrakt (Angewandte), HS 117.00 jeweils MittwochBeginn: 13. M&auml;rz 2013Die 1-st&uuml;ndige Lehrveranstaltung wird 14-t&auml;gig, jeweils 2-st&uuml;ndig abgehalten@font-face { font-family: "ＭＳ 明朝"; }@font-face { font-family: "ＭＳ 明朝"; }p.MsoNormal, li.MsoNormal, div.MsoNormal { margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: "Times New Roman"; }.MsoChpDefault { font-size: 10pt; }div.WordSection1 { page: WordSection1; }Termine B&ouml;nsch:!!! Achtung!!! Vorl&auml;ufige krankheitsbedingte Terminverschiebung13.M&auml;rz20.M&auml;rz: Annemarie B&ouml;nsch(statt Carmen Bock)10.April: Carmen Bock(statt B&ouml;nsch)24.April15.Mai29.Mai12.Juni19.Juni: F&uuml;hrung durch die Kost&uuml;m-und Modesammlung26.Juni: 1.Pr&uuml;fungsterminAls Erg&auml;nzung und Erweiterung wird die 1-st&uuml;ndige VL von Carmen Bock (Kleidung in Asien) empfohlen. 14-t&auml;gig, jeweils 2-st&uuml;ndig, alternierend mit der VL von Dr.B&ouml;nsch</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00191</td>
+        <td class='lva_info'> Kleidung in Afrika(2013S / 1 WStd. / 1 ECTS / Vorlesungen / S00191)</td>
+        <td class='descr'> Grundformen der Bekleidung mit dem Schwerpunkt der formalen &Uuml;berschichtungen in Nordafrika. Schwarzafrikanische Grundformen im &Uuml;berblick. Wurzeln und Ausbildung der Turkkost&uuml;me.</td>
+        <td class='lvatype'> Vorlesungen</td>
+        <td class='anmerkungen'> F&uuml;r Studierende anderer Universit&auml;ten ist eine Mitbelegung an der Angewandten erforderlich.</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Bönsch, Anna Maria Univ.-Lekt. Dr. phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> students will be expected to read the bibliography, and either to write a paper after discussing the topic with prof Lefaivre or design a playground according to the PIP principle. Field trips on bicycles will be organized into the fifteenth district with Prof Lefaivre</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?3421?14.03.13?&amp;1Ra474ZP&amp; ">Lefaivre, Liane  o. Univ.-Prof. Dr.phil.</a></td>
+        <td class='ort'> Fridays from 13.00 to 14.30 in thee office of Prof Lefaivre, Dachgeschoss Ferstel Trakt</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00225</td>
+        <td class='lva_info'> Geschichte und Theorie der Architektur 2 : Context (Part 1)(2013S / 2 WStd. / 2 ECTS / Seminar / S00225)</td>
+        <td class='descr'> Title: The City, the Child and the Power of PlayGlobalization means living with people who differ&mdash;racially, ethnically, religiously, or economically&mdash;is the most urgent challenge facing civil society today. We tend socially to avoid engaging with people unlike ourselves, and modern politics encourages the politics of the tribe rather than of the city.&nbsp;Can architecture do anything about this? The present course looks into the emergence of an urban design tool, what Prof Lefaivre has called the PIP Principle applied to the design of playgrounds as a means of enhancing integration in a multi-cultural neigboorhood, the 15th district of Vienna.&nbsp;The child is seen here as the smallest stich in the urban fabric, the locus of least resistance between people. Playgrounds are rethought, as small unis, placed in in-between, &nbsp;left-over intessticial niches tucked into the neighboorhood and located through participatory processes, following discussions with the users, is children, parents, eachers, local government.Readings will include Liane Lefaivre, &nbsp;Mike Davis, Sakia Sassen, Eduard Gleaser, Jane Jacobs, and others&nbsp;&nbsp;&nbsp;</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> The first session is on March 8. Prof Lefaivre will be away, lecturing in Singapore and Hong Kong and Israel for the nexttwo sessions. &nbsp;The hours will be made up after Easter after consultation with the students about scheduling.&nbsp;</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Lefaivre, Liane  o. Univ.-Prof. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> &nbsp;M&uuml;ndlich, schriftlich, durch k&uuml;nstlerische Arbeit am Ende des Semesters oder Studienjahrs bzw. durch eine gemeinsame Ausstellung&nbsp;</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?62?14.03.13?&amp;Se147432&amp; ">Elias, Marion ao. Univ.-Prof. Dr.phil. Mag.art.</a></td>
+        <td class='ort'> Erste Veranstaltung im Sommersemester 2011:Dienstag, 8. M&auml;rz &nbsp;2011 14.00h c. t.Seminarraum Abteilung Philosophie, 1010, Postgasse 6, 2. StockVortrag Renate Brosch:&ldquo;Pers&ouml;nlichkeitsst&ouml;rungen - ?&rdquo;Teil 2Gender Art Lab dann ab&nbsp;Dienstag, 15. M&auml;rz 2011 14.00h c. t.,&nbsp;(Vorbesprechung und Vorschau auf das neue Semester)Seminarraum Abteilung Philosophie, 1010, Postgasse 6, 2. StockSondertermine (Gastvortr&auml;ge ecc.) werden zus&auml;tzlich elektronisch bekanntgegeben.Erste Veranstaltung (Vorbesprechung) im Sommersemester 2013: &nbsp;&nbsp;Dienstag, 12. M&auml;rz 2013, 14.00h c. t.H&Ouml;RSAAL 24, DEPENDANCE DER ANGEWANDTEN VORDERE ZOLLAMTSTRASSE, ZWISCHENGESCHOSSnach der Portiersloge LINKS in den Gang zu Aufzug, ZG dr&uuml;cken: Der Raum ist direkt vis-&agrave;-vis vom Lift, verwirrenderweise steht aber 13 und 31 drauf; Hinweisplakate werden angebracht!&nbsp;NEUEINSTIEG IM SS 2013 M&Ouml;GLICH!Sondertermine wie Gastvortr&auml;ge ecc. werden separat und elektronisch bekanntgegeben&nbsp;Vortr&auml;ge junger Wissenschaftlerinnen und K&uuml;nstlerinnenGastvortr&auml;ge von u. a. Renate Brosch und Christian Bauer im weiteren Verlauf des SemestersGender Art Lab dann ab&nbsp;Dienstag, 20. M&auml;rz &nbsp;2012 14.00h c. t.,&nbsp;H&Ouml;RSAAL 24, DEPENDANCE DER ANGEWANDTEN VORDERE ZOLLAMTSTRASSE, ZWISCHENGESCHOSSSondertermine (Gastvortr&auml;ge ecc.) werden zus&auml;tzlich elektronisch bekanntgegeben.DIE IM VORSEMESTER ANGEK&Uuml;NDIGTEN AUSSTELLUNGEN SIND F&Uuml;R JUNI UND OKTOBER 2012 GEPLANT; &nbsp;Deadline f&uuml;r Werkabgabe (auch vorerst elektronisch) und Anmeldung zu Ausstellung wird Ende April sein.Infos kommen per E-Mail&nbsp;an alle angemeldeten Kolleginnen und Kollegen&nbsp;ALLE TERMINE: Dienstags, 14.00h c. t. - 16.00h&nbsp;&nbsp;</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40224</td>
+        <td class='lva_info'> Gender Studies: Gender Art Laboratory. Primavera(2013S / 2 WStd. / 2 ECTS / Seminar / S40224)</td>
+        <td class='descr'> Das Gender Art Laboratory steht aktuell &nbsp;- weiterhin - unter dem ThemaGender -&nbsp;Gestern Heute Morgen -&nbsp;Past Present FutureUnterthema f&uuml;r die kommenden Semester ist:&nbsp;Vom Minnedienst zur Partnerb&ouml;rse;&nbsp;Rollenbilder im Wandel der Zeitund&nbsp;&ldquo;Norm - ?&rdquo;&nbsp;Genereller Fahrplan im GAL:Zu Beginn des SS 2013 wird als Prolog wieder das Thema und die Bedeutung von "Gender" zusammengefa&szlig;t; aus dem "Unterthema" vomMinnedienst zur Partnerb&ouml;rse; Rollenbilder im Wandel der ZeitsowieNorm - ?, das sich nach der erfolgreichen Doppelausstellung zum Motivkreis "Illuminazioni" als weitere Deklination dieses Motivs im GAL entwickelt hat, sollen die TeilnehmerInnen Werke erarbeiten, die bei Ausstellungen gezeigt und in einem Katalog dokumentiert werden;&nbsp;Gastvortr&auml;ge, Vortr&auml;ge und Debatten erg&auml;nzen das Programm des GAL (Gender Art Lab).Bisher als Gastvortragende fixiert:Maria Mesner und Heidi Niederkofler (Vorstellung des von ihnen herausgegebenen Buches &ldquo;Johanna Dohnal; ein politisches Lesebuch&rdquo;; &nbsp;vorgesehen f&uuml;r April 2013), Renate Brosch, Christian Bauer, Bundesministerin Heinisch-Hosek sowie eine Reihe unter dem Titel"Gegen das Neo-Biedermeier; aktuelle Positionen zu Gender, Diversity und Feminismus; Is it all over now?"Vortr&auml;ge junger Wissenschaftlerinnen und K&uuml;nstlerinnen.Der in den Vorsemestern erw&auml;hnte Katalog wird sowohl die beiden Ausstellungen aus 2012 dokumentieren wie einen Querschnitt der Vortr&auml;ge, Workshops und Pr&auml;sentationen des GAL seit 2006 schriftlich und bildlich festhalten.(Wird im SS 13 zusammengestellt.)Zwei weitere Schwerpunkte im GAL 2012/13:Renaissance aliveundDie zweite freie Kunst des TriviumRenaissance alive&nbsp;ist der Versuch, eine Epoche (wieder) lebendig zu machen, die allgemein als besonderes, goldenes Zeitalter in der europ&auml;ischen Kunst gilt. Dabei gen&uuml;gt es kaum, mit einem gelassenen R&uuml;ckblick Daten anzuh&auml;ufen und Fakten nach aktuellem Verst&auml;ndnis zu interpretieren. Die Ann&auml;herung mu&szlig; eine je pers&ouml;nliche sein, die das Umfeld an Kunst, Literatur, Musik, Philosophie ebenso vorf&uuml;hrt wie Probleme und Tatsachen des t&auml;glichen Lebens (hat Leonardo Tomaten gegessen?), der sozialen Struktur, der Ausbildung: Gab es etwa &uuml;berhaupt eine Renaissance f&uuml;r einfache B&uuml;rgerInnen? Was haben die Frauen da so gemacht? Und schlie&szlig;lich: was bedeutet Renaissance (wir kauen da ja auf einem franz&ouml;sischen Lehnwort herum), was hat sie bedeutet und was kann sie uns noch sein? Ist das Mittelalter - davor - nur grau und tr&uuml;b oder findet man vielleicht gar Ans&auml;tze im Quattro- und Cinquecento, die unsere Aufkl&auml;rung einl&auml;uten? Gibts die eigentlich - noch?Die zweite freie Kunst des Triviummeint die Rhetorik, urspr&uuml;nglich ein Hauptfach universit&auml;rer Bildung, aktuell noch nicht mal ne Marginalie. Das Trivium, mit dem Quadrivium (3 und 4 macht 7) Teil der Sieben Freien K&uuml;nste (Grammatik, Rhetorik, Dialektik; &nbsp;Arithmetik, Geometrie, Musik, Astronomie), was rein wissenschaftliche F&auml;cher meinte und somit die Konkurrenz zu den "minderen" mechanischen K&uuml;nsten (mit den H&auml;nden gemacht) darstellte, verwies die K&uuml;nstlerInnen auf die unteren Stufen der intellektuellen Hierarchie. Wie ging man damit um - und wo sind "wir " - Weltverbesserer, Freaks, Aussenseiterinnen?Rhetorik bietet auf zahlreichen Wunsch der Studierenden auch die M&ouml;glichkeit, Textinterpretation zu &uuml;ben und zu erlernen, eigene Texte (wie rede ich jetzt vor dieser Menschenmenge?) und "Fremdtexte" nicht nur einfach abzulesen sondern - Geschichten daraus zu machen, die jeder h&ouml;ren m&ouml;chte.&nbsp;Renaissance aliveundDie zweite Kunst des Trivium&nbsp;werden in Blockveranstaltungen angeboten und jeweils zus&auml;tzlich angek&uuml;ndigt; Beide Schwerpunkte sind auch f&uuml;r Nicht-GAL-TeilnehmerInnen offen!&nbsp;&nbsp;</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> Anmeldungen ab sofort unter&nbsp;gal@uni-ak.ac.atrobert.maierhofer@uni-ak.ac.atmarion.elias@uni-ak.ac.atoder in der Lehrveranstaltung.ANMELDUNG ZUR LV IST VORAUSSETZUNG F&Uuml;R DIE AUSSTELLUNGSTEILNAHME!&nbsp;&nbsp;&nbsp;</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Elias, Marion ao. Univ.-Prof. Dr.phil. Mag.art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 3</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 3</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?5960?14.03.13?&amp;H14J7432&amp; ">Schneider, Tommy Univ.-Lekt. Mag.art.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40582</td>
+        <td class='lva_info'> Medienkonvergenz und -hybridisierung III(2013S / 3 WStd. / 3 ECTS / Seminar / S40582)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Schneider, Tommy Univ.-Lekt. Mag.art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 1</td>
+        <td class='nachweis'> Projektpr&auml;sentation.</td>
+        <td class='ects'> 1</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?5766?14.03.13?&amp;1TRa4XZ7&amp; ">Wolf, Clifford Univ.-Lekt. </a></td>
+        <td class='ort'> Vorbesprechung am Fr, 8.3.2011 12:00-14:00 in der Sterngasse 13.Der Besuch der Vorbesprechung ist VERPFLICHTEND, da bei der Vorbesprechung die Termine sowie die genauen Inhalte abgekl&auml;rt werden.</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40595</td>
+        <td class='lva_info'> Code und Repräsentation IV(2013S / 1 WStd. / 1 ECTS / Seminar / S40595)</td>
+        <td class='descr'> Seminar mit begrenzter TeilnehmerInnenzahl.&nbsp;Die genauen Inhalte ergeben sich in Absprache mit den TeilnehmerInnen aus der Vorbesprechung und w&auml;hrend des laufenden Seminars.&nbsp;Geplante Inhalte der 5 Einheiten (Stand: vor der Vorbesprechung):Strom, Spannung, Kirchhoffschen Gesetze, Netzwerkanalyse, SimulationMesstechnik Grundlagen: Multimeter &amp; Oszi... weitere Themen nach&nbsp;Vorbesprechung&nbsp;</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Wolf, Clifford Univ.-Lekt.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Diplomarbeit</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?298?14.03.13?&amp;sqwm1u4y&amp; ">Strouhal, Ernst ao. Univ.-Prof. Dr.phil.</a></td>
+        <td class='ort'> DiplomandInnen-SeminarVorbesprechung: Do. 14.03.2013 , 11.00 (gem. mit DissertatInnen)Semester-Programm erfolgt bei Vorbesprechung&nbsp;</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S50787</td>
+        <td class='lva_info'> DiplomandInnenseminar(2013S / 2 WStd. / 2 ECTS / Seminar / S50787)</td>
+        <td class='descr'> Semester-Programm bei Vorbesprechung am 14.3., Plenumstermine (jew. 11.00) voraussichtlich am:14. 03.11. 04.Di. 23. 04., 17.00 (Vortrag)25. 04.16. 05.06. 06.20. 06.</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> Pers. Anmeldung erforderlich.</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Strouhal, Ernst ao. Univ.-Prof. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 4</td>
+        <td class='nachweis'> Konzeption und Pr&auml;sentation einer in der Lehrveranstaltung entstandenen k&uuml;nstlerischen Arbeit.</td>
+        <td class='ects'> 4</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?302?14.03.13?&amp;1k4xumvq&amp; ">Sunkovsky, Beatrix AProf. Mag.art.</a></td>
+        <td class='ort'> Vorbesprechungen zur Lehrveranstaltung:INSZENIERTE PROJEKTE - Konzeption und Umsetzung. Gender Studiesnach pers&ouml;nlicher Anmeldung im M&auml;rz 2013 im Zentrum f&uuml;r Kunst- und Wissenstransfer, Postgasse 6, 1010 Wienemail:beatrix.sunkovsky@uni-ak.ac.at</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S30413</td>
+        <td class='lva_info'> Inszenierte Projekte - Konzeption und Umsetzung. Gender Studies(2013S / 4 WStd. / 4 ECTS / Vorlesungen / S30413)</td>
+        <td class='descr'> INSZENIERTE PROJEKTE - Konzeption und Umsetzung. Gender StudiesIn der geblockten Lehrveranstaltung werden k&uuml;nstlerische Projekte entwickelt und ausgearbeitet.&nbsp;&nbsp;</td>
+        <td class='lvatype'> Vorlesungen</td>
+        <td class='anmerkungen'> pers&ouml;nliche Anmeldung erforderlich&nbsp;</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Sunkovsky, Beatrix AProf. Mag.art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Gepr&uuml;ft wird m&uuml;ndlich, nach den in der Vorlesung gezeigten Bildern.An 2 Terminen: 1. Pr&uuml;fungs-Termin ist in&nbsp;der letzten&nbsp; Doppel-Stunde des SS 2013. Der 2. Pr&uuml;fungs-Termin ist nach den Ferien, in der 1. Vorlesungs-Doppel-Stunde des nachfolgenden Semesters (WS 2013).</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?3279?14.03.13?&amp;Sf147W4a&amp; ">Melchardt, Erwin Prof. Univ.-Lekt.</a></td>
+        <td class='ort'> Jeden Donnerstag, von 17 Uhr bis 19 Uhr, eine zweist&uuml;ndige Vorlesung im H&ouml;rsaal 1, Hauptgeb&auml;ude, Wien 1, Oskar-Kokoschka-Platz 2.</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00190</td>
+        <td class='lva_info'> Außereuropäische Kunst: Nordafrika, Orient, Asien(2013S / 2 WStd. / 2 ECTS / Vorlesungen / S00190)</td>
+        <td class='descr'> Die Vorlesungs-Reihe "Au&szlig;ereurop&auml;ische Kunst" an der Wiener Angewandte ist die einzige Lehrveranstaltung in &Ouml;sterreich, die welt-umspannend die wichtigsten Stile der au&szlig;ereurop&auml;ischen Kunst zeigt. Mit vielen Bild-Beispielen und unter besonderer Ber&uuml;cksichtigung der sogenannten Stammes-Kulturen.Im Sommer-Semester 2013 nehmen wir die signifikanten, k&uuml;nstlerischen Erscheinungen, sowie ihre sozialen, religi&ouml;sen und kulturellen Hintergr&uuml;nde&nbsp;in Nord-Afrika, im islamischen Orient und in Asien durch. Quer durch Raum und Zeiten.Von den Tuareg der Sahara &uuml;ber die wichtigsten Zentren der islamischen Kunst des Orients, zum Hinduismus Indiens, dem Buddhismus Nepals, Tibets und im s&uuml;dostasiatischen Raum. Wir streifen&nbsp; in ihren Grundz&uuml;gen die Hochkulturen Chinas, Japans und Koreas - bis zu den alt-malaischen Stammes-Kulturen Indonesiens (Batak, Dayak u. v. a.).</td>
+        <td class='lvatype'> Vorlesungen</td>
+        <td class='anmerkungen'> Bitte zu den Vorlesungen Papier und Bleistift mitzubringen! Denn ich lasse die wichtigsten Stile direkt von den projezierten Bildern zeichnen - nach meiner Erfahrung merkt man sich die Dinge besser, wenn man sie gezeichnet hat.Soweit ich selbst in meiner (kleinen) Sammlung Original-Objekte habe, die gerade zum behandelten Vorlesungs-Stoff passen, nehme ich sie mit. Als individueller Anschauungs-Unterricht. Wenn es die verbleibende Zeit erlaubt, machen wir gegen Ende des Semsters eine "Exkursion" ins Depot des Wiener Museums f&uuml;r V&ouml;lkerkunde, um - mit dem zust&auml;ndigen Kurator -&nbsp;Original-Objekte aus unserem jeweiligen Unterrichts-Gebiet zu sehen!</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Melchardt, Erwin Prof. Univ.-Lekt.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?3544?14.03.13?&amp;1WgY474U&amp; ">Filip, Klaus Univ.-Lekt.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40571</td>
+        <td class='lva_info'> Interaktive Medien IV(2013S / 2 WStd. / 2 ECTS / Seminar / S40571)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Filip, Klaus Univ.-Lekt.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> wird in der ersten LV bekannt gegeben</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?4762?14.03.13?&amp;GCE1474y&amp; ">Noever, Anna Ixy Univ.-Lekt. Mag.phil.</a></td>
+        <td class='ort'> Mi. 10.04.2013 - 09:00 bis 13:30 | H&ouml;rsaal 2Mo. 06.05.2013 - 09:00 bis 13:30 | H&ouml;rsaal 1Mo. 13.05.2013 - 09:00 bis 13:30 | H&ouml;rsaal 1Mi.&nbsp; 15.05.2013 - 09:00 bis 14:00 | H&ouml;rsaal 2Mo. 03.06.2013 - 09:00 bis 13:30 | H&ouml;rsaal 1</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00199</td>
+        <td class='lva_info'> Autobiografie, Kunst und Film(2013S / 2 WStd. / 2 ECTS / Seminar / S00199)</td>
+        <td class='descr'> Sowohl in der Kunst- als auch in der Filmwelt flie&szlig;t die Autobiographie des K&uuml;nstlers oder Filmemachers in irgendeiner Form&nbsp;stets in das Kunstwerk ein. Die Lehrveranstaltung setzt sich nun mit Autobiographien, seien sie verborgen oder direkt sichtbar auseinander, und versucht einen Zusammenhang zwischen dem Kunstwerk und den Autobiographien der K&uuml;nstlerInnen transparent werden zu lassen. Schwerpunkt werden Filmbetrachtungen sein, ihre k&uuml;nstlerischen Umsetzungen sowie die verschiedenen filmischen Darstellungen von Autobiographien. Dieser Thematik wird an Hand von Filmbeispielen, Impulsreferaten, Filmanalysen, Gruppenarbeiten und Diskussionen nachgegangen werden. Diese &Uuml;bung schliesst an das Seminar Autobiografie, Kunst und Film an und ist in das Seminar integriert. Dieser Teil widmet sich praktischen &Uuml;bungen zu diesem Thema!</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> Wir bitten alle, die an dieser LV teilnehmen wollen,sich per email&nbsp;Anna-ixy@gmx.at&nbsp;anzumelden!Wir ersuchen alle um eine kontinuierliche Anwesenheit in der LV!!!Wer zu einem der Termine nicht kommen kann, bitte uns dies vorher per a mail bekannt zu geben!!!Wir freuen uns auf Ihr Kommen und auf eine spannende gemeinsame Arbeit! :-)</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Noever, Anna Ixy Univ.-Lekt. Mag.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Pr&uuml;fungsmodus:schriftliche Klausur (Mi, 22.05.2013, 17:30 - 19:30, Seminarraum B)&nbsp;Ersatztermine: n.&Uuml;.</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?4976?14.03.13?&amp;1fVT47X4&amp; ">Thurner, Alexandra Univ.-Lekt. Dr.iur.</a></td>
+        <td class='ort'> Termine (Blocklehrveranstaltung):Mi, 10.04.2013 - 17:00 bis 20:00 | Seminarraum BMi, 17.04.2013 - 17:00 bis 20:00 | Seminarraum BMo, 22.04.2013 - 17:00 bis 20:00 | H&ouml;rsaal 4Mi, 24.04.2013 - 17:00 bis 20:00 | Seminarraum BMo, 06.05.2013 - 17:00 bis 20:00 | H&ouml;rsaal 4Mi, 08.05.2013 - 17:00 bis 20:00 | Seminarraum BMo, 13.05.2013 - 17:00 bis 20:00 | H&ouml;rsaal 4Klausur:Mi, 22.05.2013 - 17:30 bis 19:30 | Seminarraum B</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S30405</td>
+        <td class='lva_info'> Vertrags- und Urheberrecht(2013S / 2 WStd. / 2 ECTS / Vorlesungen / S30405)</td>
+        <td class='descr'> Grundbegriffe des allgemeinen Zivilrechts (Vertragsrecht)unter anderem:Zustandekommen von Vertr&auml;genWirksamkeitsvoraussetzungenVertragsm&auml;ngel vor und nach AbschlussVertragstypenGrundbegriffe des Urheberrechtsunter anderem:SchutzvoraussetzungenRechte des Urhebers (Werkverwertung und Pers&ouml;nlichkeitsrechte)Ausnahmen vom Urheberrechtsschutz (freie Werknutzungen)LeistungsschutzrechteSanktionen bei Urheberrechtsverletzungen</td>
+        <td class='lvatype'> Vorlesungen</td>
+        <td class='anmerkungen'> Anmeldung:Per E-Mail:alexandra.thurner@uni-ak.ac.atoder Eintragung in die Teilnehmerliste in der ersten VO-Einheit</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Thurner, Alexandra Univ.-Lekt. Dr.iur.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> M&uuml;ndliche Pr&uuml;fung am Ende des Semesters!</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?2624?14.03.13?&amp;1e4msq74&amp; ">Holzer, Walter Gastprof. Dipl.-Ing.</a></td>
+        <td class='ort'> Abteilung KUNST UND WISSENSTRANSFERExpositur: 1010 Wien, Postgasse 6,2. Stock, Seminarraum&nbsp;Seminarstart: 05. M&auml;rz 2013Dienstag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 05.03.2013 &nbsp;&nbsp;&nbsp; 15.00 - 17.00 UhrDienstag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12.03.2013&nbsp;&nbsp;&nbsp;&nbsp; 15.00 - 17.00 Uhr- NEUER TERMIN!Dienstag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19.03.2013 &nbsp;&nbsp;&nbsp; 15.00 - 17.00 Uhr-Terminkorrektur!Dienstag &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 09.04.2013 &nbsp;&nbsp;&nbsp; 15.00 - 17.00 UhrDienstag &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16.04.2013 &nbsp;&nbsp;&nbsp; 15.00 - 17.00 UhrDienstag &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23.04.2013 &nbsp;&nbsp;&nbsp; 15.00 - 17.00 UhrDienstag&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 30.04.2013 &nbsp; &nbsp; 15.00 - 17.00 UhrDienstag&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 07.05.2013 &nbsp; &nbsp; 15.00 - 17.00 UhrDienstag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14.05.2013 &nbsp;&nbsp;&nbsp; 15.00 - 17.00 UhrDienstag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 28.05.2013 &nbsp;&nbsp;&nbsp; 15.00 - 17.00 Uhr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;weitersDienstag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 04.06.2013 &nbsp; &nbsp; 15.00 - 17.00 UhrDienstag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11.06.2013 &nbsp;&nbsp;&nbsp; 15.00 - 17.00 UhrDienstag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18.06.2013 &nbsp; &nbsp; 15.00 - 17.00 Uhr -Pr&uuml;fungsterminDienstag &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 25.06.2013 &nbsp;&nbsp;&nbsp; 15.00 - 17.00 Uhr -Pr&uuml;fungstermin&nbsp;&Auml;nderungen werden m&uuml;ndlich und durch Aushang in der Aula im Hauptgeb&auml;ude bekanntgegeben.</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S30407</td>
+        <td class='lva_info'> Gewerblicher Rechtsschutz - Einführung(2013S / 2 WStd. / 2 ECTS / Seminar / S30407)</td>
+        <td class='descr'> GEWERBLICHER RECHTSSCHUTZ I - Einf&uuml;hrung in den gewerblichen Rechtsschutz (Designs, Marken, Gebrauchsmuster, Patente, Lizenzvertr&auml;ge, Werkvertr&auml;ge, usw.); Grundlagen und Schutzm&ouml;glichkeiten, weitgehend an Hand von Werken der bildenden und angewandten Kunst.&nbsp;</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> Die Lehrveranstaltung ist geeignet f&uuml;r jede Fachrichtung. - Anmeldungen f&uuml;r Beratungen sind jederzeit m&ouml;glich!</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Holzer, Walter Gastprof. Dipl.-Ing.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> m&uuml;ndliches Referat (30 min) udn schriftliche NIederlegung auf einem Thesenblatt (1 DinA4 -Seite), Anwesenheit, Mitarbeit</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?383?14.03.13?&amp;1DFB4743&amp; ">Vergeiner, Renate ao. Univ.-Prof. Dr.phil.</a></td>
+        <td class='ort'> Ort:Seminarraum der Kultur- und Geistesgeschichte, Franz-Josefskai 5.&nbsp; A-1010 WIEN:Zeit:Montag 13 30 - 15 00</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00177</td>
+        <td class='lva_info'> Kleopatra(2013S / 2 WStd. / 2 ECTS / Proseminar / S00177)</td>
+        <td class='descr'> &nbsp;Fortf&uuml;hrung des Themas vom WS 2012. Im SS 2013 geht es um Kleopatra, die letzte legitime Pharaonin, die mit ihren Reizen sowohl den genialen Caesar als auch den jungen Marcus Antonius bet&ouml;rt hatte, um ihre und die Machtstellung &Auml;gyptens auszubauen. Ihr Leben ist schicksalhaft, turbulent, mutig und dramatisch, wie ihr Selbstmord mit der Schlange. Obwohl oder gerade weil (!) ihre Nase zu lang war, gilt Kleopatra als Inbegriff erotischer Finesse, was auf den Wahrheitsgehalt des Mythos hinzuweisen scheint. In der Darstellung durch die K&uuml;nstler wurde die ber&uuml;ckend sch&ouml;ne und exzentrische Herrscherin zur Verk&ouml;rperung des &nbsp;geheimnisvollsten und sagenumwobensten aller L&auml;nder.Anekdoten, Bilder, Legenden und Geschichtsschreibung sind ununterscheidbar verwoben. Sie erzeugten Legenden und bedienten Klischees, weshalb es im PS darum gehen wird die mythische noch vor der historischen Person zu erforschen.</td>
+        <td class='lvatype'> Proseminar</td>
+        <td class='anmerkungen'> Sprechstunden n.V.zus&auml;tzliche adresse, bei Serverproblemen etc: renatevergeiner@yahoo.at</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Vergeiner, Renate ao. Univ.-Prof. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 20</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 12,73</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?266?14.03.13?&amp;d1ZXTP47&amp; ">Schnell, Ruth  Univ.-Prof. Mag.art.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40535</td>
+        <td class='lva_info'> ZKF - Digitale Kunst III-VII(2013S / 20 WStd. / 12,73 ECTS / Künstl. Einzelunterricht / S40535)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Künstl. Einzelunterricht</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Schnell, Ruth  Univ.-Prof. Mag.art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Referat und schriftliche Arbeit, Anwesenheit, Lekt&uuml;re kurzer Texte&nbsp;</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?4660?14.03.13?&amp;f14b7Z43&amp; ">Spohn, Anna Margareta Sen.Sc. Mag.art. Dr.phil.</a></td>
+        <td class='ort'> Die Lehrveranstaltung findet (w&ouml;chentlich) amMittwochzwischen11.00 und 12:30 Uhran der Abteilung Kulturwissenschaften,Standort Franz-Josefs-Kai5, 1.Stock, T&uuml;r 9, A-1010 Wien imSeminarraum Kulturgeschichtestatt.&nbsp;1. Termin und Vorbesprechung: 13.03.2013&nbsp;</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00181</td>
+        <td class='lva_info'> Orte, Räume und Städte(2013S / 2 WStd. / 2 ECTS / Proseminar / S00181)</td>
+        <td class='descr'> In der Lehrveranstaltung sollen Aspekte des Themenkreises &bdquo;Orte, R&auml;ume und St&auml;dte&ldquo; aus kulturwissenschaftlicher bzw. raumtheoretischer Perspektive diskutiert werden. Das setzt voraus, dass &bdquo;Raum&ldquo;nicht nurals neutrale, dreidimensionale Ausdehnung und als Beh&auml;ltnis in dem soziales Leben stattfindet verstanden wird. Insbesondere das urbane Umfeld, aber auch z. B. Strukturen des Wohnraums pr&auml;gen Lebensweisen oder Verhaltensmuster mit und k&ouml;nnten als &bdquo;Symptome&ldquo; gesellschaftlicher Strukturen aufgefasst werden. &ndash; So ist der st&auml;dtische Raum ein Netz von Orten, Wegen, Pl&auml;tzen und Handlungsweisen und zugleich eine Rahmenbedingung ihrer BewohnerInnen. In theoretischen Debatten gewinnt der Begriff &bdquo;Raum&ldquo; politische Konturen, denn die Aneignung und Gestaltung von R&auml;umen entscheidet sich vor dem Hintergrund bestimmter (Wert-)Vorstellungen und Normen.&nbsp;Die TeilnehmerInnen k&ouml;nnen sich f&uuml;r ein Thema entscheiden, das sie im Rahmen einer Proseminararbeit und einer kurzen Pr&auml;sentation bzw. Diskussion behandeln m&ouml;chten. Diese k&ouml;nnen sich entweder anhand einer Fragestellung auf einen Text beziehen (z.B. von Arendt, Heidegger, Bourdieu, de Certeau, Aug&eacute;, Simmel ...) oder sich innerhalb eines Themas im Rahmen des Semesterplans bewegen (z. B.: &Uuml;berlegungen zu st&auml;dtischen Strukturen/Wohnraumstrukturen, zu &bdquo;Praktiken&ldquo; im Raum, zu &Auml;sthetik und Gesellschaftspolitik in Bezug auf das st&auml;dtische Umfeld, zu privaten und &ouml;ffentlichen Orten, zu Nomadismus und Sesshaftigkeit oder auch Gated Communities, alternativen od. utopischen Wohnformen, Grenzen und Barrieren ...).&nbsp;Im Laufe des Semesters sollen begleitend kurze Texte und Textpassagen gemeinsam gelesen und diskutiert werden um einen einf&uuml;hrenden und exemplarischen Einblick in die Thematik zu erm&ouml;glichen.&nbsp;&nbsp;Eine Liste der Termine mit Themenvorschl&auml;gen und der Texte (die wir gemeinsam lesen werden) ist ab Anfang M&auml;rz verf&uuml;gbar; wird bei der Vorbesprechung bekannt gegeben.Weiterf&uuml;hrende Literatur und &Uuml;berblicksdarstellungen:D&uuml;nne, J&ouml;rg (Hg.) (2006):Raumtheorie: Grundlagentexte aus Philosophie und Kulturwissenschaften.Frankfurt am Main: SuhrkampG&uuml;nzel, Stephan (Hg.) (2008):Raumwissenschaften.Frankfurt am Main: SuhrkampMaresch, Rudolf / Werber, Niels (Hg.) (2002):Raum &ndash; Wissen &ndash; Macht. Frankfurt am Main: SuhrkampHartle, Johan Frederik (2006):Der ge&ouml;ffnete Raum: zur Politik der &auml;sthetischen Form. M&uuml;nchen: FinkMoravanszky, Akos (Hg.) (2003):Architekturtheorie im 20. Jahrhundert - Eine kritischeAnthologie. Wien: Springer</td>
+        <td class='lvatype'> Proseminar</td>
+        <td class='anmerkungen'> &nbsp;</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Spohn, Anna Margareta Sen.Sc. Mag.art. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 1</td>
+        <td class='nachweis'> schriftliche Pr&uuml;fung</td>
+        <td class='ects'> 1</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?34?14.03.13?&amp;y1r4743w&amp; ">Bock, Carmen VB</a></td>
+        <td class='ort'> Fersteltrakt (Angewandte), HS 117.00 Uhr jeweils MittwochBeginn: 13. M&auml;rz 2013Die 1-st&uuml;ndige Lehrveranstaltung wird 14-t&auml;gig, jeweils 2-st&uuml;ndig abgehalten.Die&nbsp;Lehrveranstaltung &nbsp;findet alternierend mit der VL "Kleidung in Afrika" (Nr.: S00191) von Univ.-Lekt. Dr. Anna Maria B&ouml;nsch statt.&nbsp;</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00193</td>
+        <td class='lva_info'> Kleidung in Asien(2013S / 1 WStd. / 1 ECTS / Vorlesungen / S00193)</td>
+        <td class='descr'> Grundformen der Bekleidung in Asien.</td>
+        <td class='lvatype'> Vorlesungen</td>
+        <td class='anmerkungen'> F&uuml;r Studierende anderer Universit&auml;ten ist eine Mitbelegung an der Angewandten erforderlich.</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Bock, Carmen VB</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Anwesenheit in der ersten Stunde und danach kontinuierliche Teilnahme, Bereitschaft zur Diskussion, kleine wissenschaftliche Hausarbeit (Abgabe des Ausdrucks bis 15. August 2013)</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?347?14.03.13?&amp;1eX474kg&amp; ">Zeiller, Martin AProf. Mag.phil. Dr.phil.</a></td>
+        <td class='ort'> Abhaltung:&nbsp;w&ouml;chentlichTermin:&nbsp;Mittwoch, 13-14:30 UhrBeginn:&nbsp;Mittwoch, 13. M&auml;rz 2013, 13-14:30 Uhr, H&ouml;rsaal&nbsp;3 (Neubau, Erdgescho&szlig;)Ort:&nbsp;H&ouml;rsaal 3zus&auml;tzliche Informationen zur Abhaltung:teilweise Mittwoch, 13-16 Uhr Exkursionen</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00201</td>
+        <td class='lva_info'> Frühjahr/Sommer 2013 (Analyse künstlerischer Produktion, Übung v.Originalen)(2013S / 2 WStd. / 2 ECTS / Proseminar / S00201)</td>
+        <td class='descr'> vollst&auml;ndiger LV-Titel:Fr&uuml;hjahr/Sommer 2013. Zeitgen&ouml;ssische Kunst (Analyse k&uuml;nstlerischer Produktion, &Uuml;bungen vor Originalen)Der Schwerpunkt des Proseminars liegt auf Anschauung. Wir besuchen aktuelle Ausstellungen, Leitlinie ist die Frage nach der Gegenwartskunst.Seit dem 20. Jahrhundert ist der von K&uuml;nstlern produzierte Kommentar (Manifest, Begleittext, Rede) Bestandteil des k&uuml;nstlerischen Werks. Davon ausgehend werden wir besonders ein Augenmerk auf das Verh&auml;ltnis Gegenstand/Text legen. So geh&ouml;rt u.a. zu unseren Aufgaben die kritische Lekt&uuml;re des Ausstellungskatalogs.Ein Handapparat zum Seminar mit aktuellen Ausstellungskatalogen befindet sich im Hauptlesesaal der Universit&auml;tsbibliothek.</td>
+        <td class='lvatype'> Proseminar</td>
+        <td class='anmerkungen'> beschr&auml;nkte TeilnehmerInnenzahl</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Zeiller, Martin AProf. Mag.phil. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?132?14.03.13?&amp;1ra4zptv&amp; ">Huber, Michael VL Mag. art.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40321</td>
+        <td class='lva_info'> Fernsehen als Medium (Medienästhetik)(2013S / 2 WStd. / 2 ECTS / Seminar / S40321)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Huber, Michael VL Mag. art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Schriftliche Arbeit</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?3675?14.03.13?&amp;1e4ac7n4&amp; ">Reininger, Alice Sen.Sc. Mag.art. Dr.phil.  MAS</a></td>
+        <td class='ort'> Seminarraum,&nbsp; Franz Josefs-Kai 5/9Erste Vorlesung: Dienstag, 12. M&auml;rz, 2013, 10.30 Uhr</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00178</td>
+        <td class='lva_info'> Starke Frauen - Frauenbilder im Laufe der Jahrhunderte(2013S / 2 WStd. / 2 ECTS / Vorlesungen / S00178)</td>
+        <td class='descr'> Starke Frauen &shy;&ndash; Frauenbilder im Laufe der JahrhunderteVorlesung, 2 Std.Schon in der Antike wird uns &uuml;ber Frauen berichtet, die au&szlig;ergew&ouml;hnlich, tatkr&auml;ftig und einflussreich waren. Sie brachen mit dem von einer patriarchalisch bestimmten Gesellschaft verlangtem Rollenbild. Diese von einer M&auml;nnerwelt gepr&auml;gten Strukturen lie&szlig;en sich nur langsam aufbrechen. Im Laufe der Geschichte finden wir&nbsp; kritisch denkende, nach Gleichheit strebende Frauen, die verschiedentlich bezeichnet wurden wie: aufm&uuml;pfig, Mannweib, Emanze etc. Rosa Mayreder sagte zur Situation der Frauen zu Beginn des 20. Jahrhunderts: &bdquo;Man wird erst wissen, was die Frauen sind, wenn ihnen nicht mehr vorgeschrieben wird, was sie sein sollen.&ldquo; Wissen wir es wirklich?</td>
+        <td class='lvatype'> Vorlesungen</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Reininger, Alice Sen.Sc. Mag.art. Dr.phil.  MAS</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> 2 Termine f&uuml;r schriftliche Pr&uuml;fung, 90 min a 3 Fragen zu den Inhalten der Vl. Bewertet werden Verst&auml;ndnis und Interpretation des in den Vl Gesagten udn Gezeigten. M&uuml;ndliche Termine in Englisch nur nur nach Vereinbarung und f&uuml;r Studenten die sich mit der deutschen Schriftsprache schwer tun.</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?383?14.03.13?&amp;CEM1xK47&amp; ">Vergeiner, Renate ao. Univ.-Prof. Dr.phil.</a></td>
+        <td class='ort'> Ort:Universit&auml;t f&uuml;r angewandate Kunst, Oskar Kokoschkaplatz 2, A-1010 WIEN H&ouml;rsaal 1Zeit: Dienstag:VL: 1300&ndash; 1430im HS 1 der Universit&auml;t f&uuml;r angewandte Kunst. Oskar Kokoschkaplatz 2.</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S50507</td>
+        <td class='lva_info'> Manga II(2013S / 2 WStd. / 2 ECTS / Vorlesungen / S50507)</td>
+        <td class='descr'> &nbsp;Titel:MANGA ILehrveranstaltungsbeschreibung: in Ankn&uuml;pfung an die Lehrveranstaltung &bdquo;The Japanese Experience&ldquo; im Studienjahr 2004/5 werden die Weiterentwicklungen innerhalb der Genre Manga und Anime untersucht. Grundlage bilden die damals gehaltenen Vorlesungen und Referate. Dazu Texte und Bilder der klassischen Kunstgeschichte und Moderne &ndash; der Fokus liegt auf dem Vergleich westlicher und fern&ouml;stlicher Subkulturen. Insbesonderheit die Aspekte von Katharsis und Moratorium werden auf aktuelle Trends und Ph&auml;nomene angewandt wie sied in den Medien, vor allem in der Werbung, als Ausdruck zeitgen&ouml;ssischer &Auml;sthetik zu beobachten sind. Die Kunstproduktion zwischenhigh and lowsowie der Angewandten stehen dabei zur Diskussion.&nbsp;</td>
+        <td class='lvatype'> Vorlesungen</td>
+        <td class='anmerkungen'> -</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Vergeiner, Renate ao. Univ.-Prof. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?2835?14.03.13?&amp;U1Yhj47d&amp; ">Felder, Thomas Univ.-Lekt.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S30318</td>
+        <td class='lva_info'> Digital Sound & Voice IV(2013S / 2 WStd. / 2 ECTS / Seminar / S30318)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Felder, Thomas Univ.-Lekt.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?6278?14.03.13?&amp;eW1474Sh&amp; ">Auer, Günther Sen.Art.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00330</td>
+        <td class='lva_info'> Algorithmisches Entwerfen II(2013S / 2 WStd. / 2 ECTS / Seminar / S00330)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Auer, Günther Sen.Art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> </td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?331?14.03.13?&amp;1nf4h7a4&amp; ">Weibel, Peter emer. o. Univ.-Prof.</a></td>
+        <td class='ort'> 1030 Wien, Am Heumarkt 27, 2. Stock, T&uuml;r 3AMontag, 18.3.2013, 14 Uhr(Es kann aus Termingr&uuml;nden leider immer nur die n&auml;chste/n Vorlesung/en sp&auml;testens eine Woche vorher angek&uuml;ndigt werden)</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00315</td>
+        <td class='lva_info'> Schriftmedien - Medienrevolutionen(2013S / 2 WStd. / 2 ECTS / Vorlesungen / S00315)</td>
+        <td class='descr'> Schriftmedien - Medienrevolutionen</td>
+        <td class='lvatype'> Vorlesungen</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Weibel, Peter emer. o. Univ.-Prof.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 1</td>
+        <td class='nachweis'> schriftliche Pr&uuml;fung</td>
+        <td class='ects'> 1</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?6123?14.03.13?&amp;dj14h7X4&amp; ">Kernbauer, Eva Univ.-Prof. Mag.phil. Dr.phil.</a></td>
+        <td class='ort'> Abhaltung:geblocktTermin:Mittwoch, 18-20 UhrBeginn:Mittwoch, 13. M&auml;rz 2013, 18-20 Uhr, H&ouml;rsaal 2 (Altbau, 1. Stock)Ort:H&ouml;rsaal 2Termine:13. M&auml;rz 2013Barbara Schr&ouml;dl&bdquo;...arm, aber sexy&ldquo;. Geschlechtsbedingte Ungleichheit und die Figur des Bohemien im Berlin der Gegenwart17. April 2013Alexandra SchwartzMoMA&rsquo;s Modern Women&rsquo;s Project, Feminism, and Curatorial Practice15. Mai 2013Nanne BuurmanEngendering Exhibitions. Zum Verh&auml;ltnis von Ausstellungsautorschaft und Gender12. Juni 2013Rachel Epp BullerArt and the Maternal: Strategies and InterventionsEnde Juni 2013Pr&uuml;fungDer &Uuml;berblick &uuml;ber die Vortragstermine ist ebenso auf der Website derAbteilung f&uuml;r Genderangelegenheitenzu finden. Dort werden auch &ndash; sobald sie verf&uuml;gbar sind &ndash; genauere Infos zu den Vortr&auml;gen wie ein Abstract, das Plakat und kurze biographische Infos zur Verf&uuml;gung gestellt.</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S20453</td>
+        <td class='lva_info'> Geschlechterpolitik und Kunstbetrieb / Gender Politics and the Art World(2013S / 1 WStd. / 1 ECTS / Vorlesungen / S20453)</td>
+        <td class='descr'> vollst&auml;ndiger LV-Titel:Kunst &ndash; Forschung &ndash; Geschlecht. Geschlechterpolitik und Kunstbetrieb / Gender Politics and the Art WorldWenn auch eine Reihe an Museen in den letzten Jahren erstmals von Frauen geleitet wird, Frauennamen in Kunstrankings an obersten Pl&auml;tzen pr&auml;sent sind und Rektorinnen Kunstuniversit&auml;ten vorstehen, haben sich Fragen nach der Geschlechterpolitik und den Geschlechterdifferenzen im Kunstbetrieb keineswegs er&uuml;brigt. Zunehmend prek&auml;re Arbeitsverh&auml;ltnisse und knapper werdende Ressourcen geben Anlass zur These, dass sich Ungleichheitsstrukturen wieder zu verst&auml;rken beginnen. Parallel dazu manifestiert sich in der Forschung j&uuml;ngst gro&szlig;es Interesse an der Aufarbeitung von Geschlechterdifferenzen im Kunstbetrieb der Gegenwart sowie in der j&uuml;ngeren Kunstgeschichte. In der Vortragsreihe soll daher zum einen die Geschlechterpolitik im Kunstsystem ausgehend von der aktuellen Situation hinterfragt werden. Welche Rolle spiel(t)en die Kategorie &bdquo;Gender&ldquo; und geschlechtsbedingte Machtverh&auml;ltnisse beim Produzieren, Sammeln, Ausstellen, Rezipieren und Vermitteln von Kunst? Welche Entwicklungslinien und Rollbacks sind hier festzumachen? Zum anderen zielt die Vortragsreihe auf die Pr&auml;sentation und Analyse konkreter Kunstprojekte, die auf ungleiche Geschlechterverh&auml;ltnisse in Kunstinstitutionen mittels subversiver &auml;sthetischer Strategien hinweisen und alternative Sichtweisen im Moment der Rezeption erm&ouml;glichen. Wie unterminieren K&uuml;nstlerinnen und K&uuml;nstler institutionelle Exklusionsmechanismen?</td>
+        <td class='lvatype'> Vorlesungen</td>
+        <td class='anmerkungen'> Studierende k&ouml;nnen die Vortragsreihe als Lehrveranstaltung absolvieren.Anrechenbarkeit:Gender StudiesDiese Vortragsreihe wird in Zusammenarbeit mit der Abteilung f&uuml;r Genderangelegenheiten organisiert &gt;&gt;weitere Infos</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Kernbauer, Eva Univ.-Prof. Mag.phil. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Kontinuierliche Teilnahme, aktive Mitarbeit, m&uuml;ndliches Referat und danach vertiefende schriftliche Ausarbeitung (Abgabe des Ausdrucks bis 15. August 2013)</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?347?14.03.13?&amp;A14w74s3&amp; ">Zeiller, Martin AProf. Mag.phil. Dr.phil.</a></td>
+        <td class='ort'> Abhaltung:&nbsp;w&ouml;chentlichTermin:&nbsp;Dienstag, 13-14:30 UhrBeginn:&nbsp;Dienstag 12. M&auml;rz 2013, 13-14:30 Uhr, H&ouml;rsaal 4 (Altbau, 1. Stock)Ort:&nbsp;H&ouml;rsaal 4</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00203</td>
+        <td class='lva_info'> Die Kunst der Wiederholung(2013S / 2 WStd. / 2 ECTS / Seminar / S00203)</td>
+        <td class='descr'> Nihil sub sole novum.(Es gibt Nichts Neues unter der Sonne.)Ben AkibaNach kunsthistorischen Ausschnitten, die Wiederholung als (differentielle) Kopie des Originals, Zitat, Pastiche, Parodie, Fake usw. zeigen, sollen in diesem Seminar, Diskurse der Aneignung zwischen kritischer Reflexion und Hommage &ndash; auftretend in der zeitgen&ouml;ssischen Kunst u.a. als Rekombination, Rekonstruktion, Remake und Reenactment &ndash; Gegenstand sein.Wir werden anhand der kanonisierten Appropriation Art Fragen nach Originalit&auml;t, Autonomie und Autorenschaft nachgehen, uns mit der inzwischen historischen Postmoderne auseinandersetzen, Aktualit&auml;t und Historizit&auml;t von Ready-Made Konzepten untersuchen und gehen auch Copyright Fragen (Reproduktion, Copy &amp; Paste, &hellip;) nach.Das detaillierte Programm als auch die Arbeitsstruktur des aktuellen, universit&auml;r an mehreren Orten verhandelten, vielschichtigen Gegenstandes wird im Seminar gemeinsam erarbeitet.Ein Handapparat zum Thema ist im Hauptlesesaal der Bibliothek aufgebaut. Darunter als m&ouml;glicher Einstieg in den Gegenstand:L.H.O.O.Q., ras&eacute;e(Marcel Duchamp. Druckgraphik, hrsg. v. Martin Zeiller i. A. der Universit&auml;t f&uuml;r angewandte Kunst Wien, Wien 2003, S.6f.)</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> Teilnahmevoraussetzungen:Nachweis &uuml;ber den positiven Abschluss von 1 Vorlesung + 2 Proseminaren in Kunstgeschichte oder anderen geisteswissenschaftlichen F&auml;chern; eigenst&auml;ndiges wissenschaftliches Arbeiten wird vorausgesetzt</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Zeiller, Martin AProf. Mag.phil. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Die Pr&uuml;fungsarbeiten werden ausschlie&szlig;lich in elektronischer Form entgegengenommen. Bitte geben Sie IhrenNamen, Matrikelnummer und das zutreffendeSemesteran - danke.</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?5387?14.03.13?&amp;147fR4Z3&amp; ">Pfaller, Robert Univ.Prof. Dr.phil.habil.</a></td>
+        <td class='ort'> Ort: 1010 Wien, Oskar Kokoschka-Platz 2, Seminarraum B, Dachgescho&szlig;Erste Lehrveranstaltung: Mittwoch, 13. M&auml;rz 2013, 17.15-20.15, 14-t&auml;gigweitere Termine: werden noch bekanntgegeben</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S50992</td>
+        <td class='lva_info'> Philosophie der Kunst II(2013S / 2 WStd. / 2 ECTS / Vorlesung und Übungen / S50992)</td>
+        <td class='descr'> Wann ist Ihnen zum letzten Mal in einem Kunstraum etwas begegnet, das Sie als etwas Unerwartetes charakterisieren w&uuml;rden? Was waren die Besonderheiten? Inwiefern war es unerwartet? Wodurch unterscheidet sich das Unerwartete z. B. vom Seltsamen, Exotischen, Sensationellen?Beispiel einer unerwarteten Entdeckung: Ladislaus Almasy findet 1932 auf der Suche nach einer alten Oase in der libyschen W&uuml;ste eine Reihe pr&auml;historischer Felszeichnungen, &bdquo;Schwimmer in der W&uuml;ste&ldquo;.&nbsp;</td>
+        <td class='lvatype'> Vorlesung und Übungen</td>
+        <td class='anmerkungen'> Es wird gebeten, Anmeldungen unterIrene.Gerersdorfer@uni-ak.ac.atper Mail abzugeben.Die erstellte Adressenliste dient zur Verst&auml;ndigung, wenn eine Lehrveranstaltung ausf&auml;llt, zur Zusendung von&nbsp;Skripten und Materialien f&uuml;r Lehrveranstaltungen und zur Bekanntgabe&nbsp;sonstiger Informationen. Bitte geben Sie Ihren Vor und Zunamen, Studienrichtung und die&nbsp;Matrikelnummer an -&nbsp;danke.</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Pfaller, Robert Univ.Prof. Dr.phil.habil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?2807?14.03.13?&amp;SKV14Ge7&amp; ">Lachmayer-Felderer, Brigitte Sen.Lect. Mag. phil.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00170</td>
+        <td class='lva_info'> Artful Science II(2013S / 2 WStd. / 2 ECTS / Vorlesungen / S00170)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Vorlesungen</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Lachmayer-Felderer, Brigitte Sen.Lect. Mag. phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?3055?14.03.13?&amp;14u743Ky&amp; ">Koger, Peter Univ.-Lekt.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40574</td>
+        <td class='lva_info'> Interaktive Medien II(2013S / 2 WStd. / 2 ECTS / Seminar / S40574)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Koger, Peter Univ.-Lekt.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> </td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?334?14.03.13?&amp;nf1p4ah7&amp; ">Werkner, Patrick ao. Univ.-Prof. Dr.phil.</a></td>
+        <td class='ort'> Nach pers&ouml;nlicher &Uuml;bereinkunft.</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S50816</td>
+        <td class='lva_info'> DiplomandInnenseminar(2013S / 2 WStd. / 2 ECTS / Seminar / S50816)</td>
+        <td class='descr'> Anleitung zum kompetenten Verfassen einer wissenschaftlichen Diplomarbeit.</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Werkner, Patrick ao. Univ.-Prof. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> aktive Anwesenheit im Seminar: Diskussionsbeitr&auml;ge, kurzes Referat, kritische Reflexion des Gegenstandes</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?5955?14.03.13?&amp;14w74uA3&amp; ">Streitfellner, Thomas Univ.-Lekt. Mag.phil.</a></td>
+        <td class='ort'> Einf&uuml;hrung und Vorbesprechung am Montag, 11.3., 17:30-19:00, HS4, Altbau, Ferstel-Trakt.&nbsp;</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S00345</td>
+        <td class='lva_info'> Politik die Kunst macht: Kunst in Österreich seit 1918(2013S / 2 WStd. / 2 ECTS / Seminar / S00345)</td>
+        <td class='descr'> Kunst und Politik stehen nicht erst seit der Moderne in einem Spannungsverh&auml;ltnis. W&auml;hrend jedoch der Einfluss von Politik auf die Kunst als gegeben erachtet wird, ergibt sich umgekehrt ein anderes Bild. Die Lehrveranstaltung bietet die M&ouml;glichkeit, auf Grundlage einer beispielhaften Auseinandersetzung anhand ausgew&auml;hlter Themen, einen Einstieg und Anreiz f&uuml;r eine weitere differenzierte Bearbeitung dieses Feldes vorzunehmen.Ausgehend von der Diskussion der politischen Rolle der Kunst in der 1. Republik und im Nationalsozialismus werden in der Lehrveranstaltung j&uuml;ngere Beispiele vorgestellt und erarbeitet. Hierzu werden Fragestellungen im Spannungsfeld zwischen Kunst und Politik aufgegriffen und anhand von Lekt&uuml;re, Gastvortr&auml;gen, Ausstellungsbesuchen, Projektarbeit und Diskussion behandelt.&nbsp;Einstieg:Kunst und Politik in der 1. Republik bis zur NS-Zeit: Kontinuit&auml;ten und Br&uuml;cheDagebliebene und Zur&uuml;ckgekehrte: Strukturelle Entwicklung von Kunst und Politik in der 2. Republik anhand ausgew&auml;hlter BeispieleWiener Aktionismus und Gesellschaftspolitik als KunstprojektBruno Kreisky, Kurt Waldheim und die &Ouml;sterreichische KunstAktuelle Beispiele:K&uuml;nstlerische Intervention und Gesellschaftspolitik: Die K&uuml;nstlergruppe &ldquo;WochenKlausur&rdquo;Raubkunst, Restitution und Wiederankauf: Die Arbeiten von Arye Wachsmuth und Sophie LillieChristoph Schlingensief &ldquo;Bitte liebt &Ouml;sterreich&rdquo; im Jahr 2000Der &ouml;sterreichische Beitrag des K&uuml;nstlerkollektivs &ldquo;monochrom&rdquo; zur Kunstbiennale in S&atilde;o Paulo 2002 und die &ldquo;Aff&auml;re Hirschhorn&rdquo; in der SchweizMarathon-Camp &ldquo;truth is concrete&rdquo; im steirischen Herbst 2012</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> Pers&ouml;nliche Anmeldung per e-mail: thomas.streitfellner@uni-ak.ac.at</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Streitfellner, Thomas Univ.-Lekt. Mag.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> m&uuml;ndliches und schriftliches Referat im Umfang von 1 1/2 h sowie mindestens 12 DinA4 Seiten. Abzugeben entweder als Ausdruck resp. word datei oder powerpoint-Pr&auml;sentation, die auch per email zugesendet oder per stick, bzw. cd &uuml;bergeben werden k&ouml;nnen.</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?383?14.03.13?&amp;Y147431a&amp; ">Vergeiner, Renate ao. Univ.-Prof. Dr.phil.</a></td>
+        <td class='ort'> &nbsp;Ort:Universit&auml;t f&uuml;r angewandte Kunst, Oskar Kokoschka-platz 2 A-1010 WIEN, H&ouml;rsaal 4Zeit:&nbsp;Dienstag 1445&ndash; 1615im HS 4 der Universit&auml;t f&uuml;r angewandte Kunst.&nbsp;</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S50508</td>
+        <td class='lva_info'> Manga II(2013S / 2 WStd. / 2 ECTS / Seminar / S50508)</td>
+        <td class='descr'> Titel:MANGA IILehrveranstaltungsbeschreibung: s.o.;. die Teilnehmer des Seminars halten Referate zu selbstgew&auml;hlten und gemeinsam besprochenen Themen mit denen sie auf die in der VL vorgestellten Bilder und Texte reagieren...</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Vergeiner, Renate ao. Univ.-Prof. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 1</td>
+        <td class='nachweis'> </td>
+        <td class='ects'> 1</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?3314?14.03.13?&amp;14fah7b4&amp; ">Bauer, Harald Univ.-Lekt. </a></td>
+        <td class='ort'> Ort:Abteilung DIGITALE KUNSTExpositur Sterngasse 13 , A-1010 WienErstveranstaltung mit Besprechung der weiteren Termine:Freitag 15.03.2013 10.00 &ndash; 13.00</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S30309</td>
+        <td class='lva_info'> Code & Repräsentation II(2013S / 1 WStd. / 1 ECTS / Seminar / S30309)</td>
+        <td class='descr'> Die Lehrveranstaltung versteht sich als Einf&uuml;hrung in die Bedeutungssystematik des Laufbilds(Kinematografischer Code) mitSchwerpunkt auf Montagemethoden (und deren Vorbereitung in der Erstellung bzw. Auswahl der filmischen Fragmente).Eine grundlegende Besprechung dramaturgischer Parameter und daraus ableitbarer Strategien sind ebenfalls Gegenstand der Veranstaltung.&nbsp;Der konkreter Ablauf der Lehrveranstaltung, die weiteren Termine, die empfohlenen Texte und Filme, sowie die Pr&uuml;fungsmodalit&auml;ten werden in der ersten Veranstaltung besprochen.:Freitag 15.03.2013 10.00 &ndash; 13.00</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> </td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Bauer, Harald Univ.-Lekt.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> The end-of-semester evaluation is based on a combination of class attendance and written work done at home.</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?2708?14.03.13?&amp;ca1gm4e7&amp; ">Waugh, Peter Univ.-Lekt.</a></td>
+        <td class='ort'> Mittwoch 14.30 p.m.-16.00 p.m.Franz Josefs-Kai, 1. Stock, A-1010 WienContact:Tel. +43-1-71133-6500Fax +43-1-71133-6509peter.waugh@uni-ak.ac.atkultur.geistes.geschichte@uni-ak.ac.at&nbsp;&nbsp;Wednesday 14.30 p.m.-16.00 p.m.&nbsp;&nbsp;</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S50811</td>
+        <td class='lva_info'> Kulturwissenschaftliches Englisch 2(2013S / 2 WStd. / 2 ECTS / Vorlesung und Übungen / S50811)</td>
+        <td class='descr'> 1)&nbsp;Conversation: discussion of art works, written texts, videos, projects and exhibitions. Assistance with vocabulary and pronunciation.2)&nbsp;Reading: examination of a range of specialist texts relevant to those fields of the applied arts in which students are working, as well as general texts on the visual and applied arts, art history, art theory and cultural studies. Assistance with vocabulary. Advice and correction will be also given in grammar and pronunciation.3)&nbsp;Writing: short text production (free form) on set topics, art works, texts read, current projects (whether pursued at the university or outside), work in other courses of university study, exhibitions visited. Also abstracts, applications and CVs. Correction and evaluation of submitted work.&nbsp;The course also includes possible visits to art and design exhibitions currently showing in Vienna, with a view to notemaking and subsequent text production.</td>
+        <td class='lvatype'> Vorlesung und Übungen</td>
+        <td class='anmerkungen'> A level of at least school English is required for this course.Da neue&nbsp;Inhalte angeboten werden,&nbsp;kann der Kurs 'Kulturwissenschaftliches Englisch 2'&nbsp;als Fortsetzung der Lehrveranstaltung 'Kulturwissenschaftliches Englisch 1' oder als&nbsp;Neukurs besucht werden.&nbsp;f&uuml;r Kurzinformationen zur Lehrveranstaltung, &Auml;nderungen &amp; Erg&auml;nzungen siehe Kultur- und Geistesgeschichte Website:http://www.uni-ak.ac.at/culture/culth_LV/</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Waugh, Peter Univ.-Lekt.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> Die Pr&uuml;fungsarbeiten werden ausschlie&szlig;lich in elektronischer Form entgegengenommen. Bitte geben Sie IhrenNamen, Matrikelnummer und das zutreffende Semesteran - danke.</td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?5387?14.03.13?&amp;x1474HFD&amp; ">Pfaller, Robert Univ.Prof. Dr.phil.habil.</a></td>
+        <td class='ort'> Ort: 1010 Wien, Expositur Postgasse 6, 2. Stock im Seminarraumerste Lehrveranstaltung: Montag, 11. M&auml;rz&nbsp;2012, 16.15 - 17.45 Uhr, w&ouml;chentlich</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S50993</td>
+        <td class='lva_info'> Lektüreseminar Philosophie(2013S / 2 WStd. / 2 ECTS / Seminar / S50993)</td>
+        <td class='descr'> &nbsp;In Kooperation mitUniv.-Prof. Dr. Ernst Strouhal,Abteilung Kultursoziologie&nbsp;Was bedeutet Mythenkenntnis in einer aufgekl&auml;rten Welt?Gibt es Wissenschaften oder Philosophie ohne Mythen?Welche antiken Mythen haben uns heute was genau zu sagen?Was bedeutet es, etwas nicht zu glauben und es doch zu erz&auml;hlen?</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> Es wird&nbsp;gebeten, Anmeldungen unterIrene.Gerersdorfer@uni-ak.ac.atper Mail abzugeben.Die erstellte Adressenliste dient zur Verst&auml;ndigung, wenn eine Lehrveranstaltung ausf&auml;llt, zur Zusendung von&nbsp;Skripten und Materialien f&uuml;r Lehrveranstaltungen und zur Bekanntgabe&nbsp;sonstiger Informationen. Bitte geben Sie Ihren Vor und Zunamen, Studienrichtung und die&nbsp;Matrikelnummeran -&nbsp;danke.</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Pfaller, Robert Univ.Prof. Dr.phil.habil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 10</td>
+        <td class='nachweis'> None</td>
+        <td class='ects'> 6,36</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?266?14.03.13?&amp;WQKS147e&amp; ">Schnell, Ruth  Univ.-Prof. Mag.art.</a></td>
+        <td class='ort'> None</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S40536</td>
+        <td class='lva_info'> ZKF - Digitale Kunst VIII(2013S / 10 WStd. / 6,36 ECTS / Künstl. Einzelunterricht / S40536)</td>
+        <td class='descr'> None</td>
+        <td class='lvatype'> Künstl. Einzelunterricht</td>
+        <td class='anmerkungen'> None</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Schnell, Ruth  Univ.-Prof. Mag.art.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+        
+    
+    <tr>
+      
+        <td class='wstd'> 2</td>
+        <td class='nachweis'> </td>
+        <td class='ects'> 2</td>
+        <td class='personlink'> <a href="http://service.uni-ak.ac.at/4DCGI/pe_person?3029?14.03.13?&amp;147h4Ud3&amp; ">Horak, Roman ao. Univ.-Prof. Dr.phil.</a></td>
+        <td class='ort'> Dienstag, jeweils vormittags, Kl. H&ouml;rsaal der Abteilung f&uuml;r Kunst- und Kultursoziologie.Vorbesprechung: Di., 12. 3. 2013, 11 Uhr</td>
+        <td class='semester'> 2013S</td>
+        <td class='lvanr'> S50726</td>
+        <td class='lva_info'> DiplomandInnenseminar(2013S / 2 WStd. / 2 ECTS / Seminar / S50726)</td>
+        <td class='descr'> Arbeit an den Diplomarbeiten</td>
+        <td class='lvatype'> Seminar</td>
+        <td class='anmerkungen'> Nur f&uuml;r anerkannte&nbsp;Diplomanden von mir.</td>
+        <td class='has_DK'> True</td>
+        <td class='person'> Horak, Roman ao. Univ.-Prof. Dr.phil.</td>
+        <td class='abschnitt'> not implemented yet</td>
+    </tr>
+
+</table>
+
+
+
+
+    
+    
+
+
+</body>
+</html>
