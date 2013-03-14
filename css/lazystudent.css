@@ -1,0 +1,78 @@
+/* ---- ( lazystudent css based on default css for table ) ---- */
+
+body {
+  background-color: #CC0000;
+}
+
+table { 
+	font: 80% Verdana, Arial, Helvetica, sans-serif;
+	color: #000;
+	text-align: left;
+	border-collapse: collapse;
+	border: 1px solid #ffffff;
+	border-top: none;	
+}
+table a {
+	text-decoration: underline;
+}
+table a:visited {
+	text-decoration: none;
+}
+tr.odd {
+	background-color: #ebf3ff;
+}
+tr a {
+	color: #000000;
+}
+tr:hover a {
+	color: #336699;
+}
+tr:hover, tr.odd:hover {
+	background-color: #ffffff;
+	color: #000000;
+}
+input {
+    background-color: #CC0000;
+    color: #000000;
+    font-weight: bold;
+    height: 45px;
+    line-height: 44px;
+    padding: 0;
+    text-align: center;
+    width: 20%;
+    border: 1px solid #ffffff;
+}
+thead th {
+	font-size: 105%;
+	color: #000;
+	text-color: #ffffff;
+	border: 1px solid #ffffff;
+	background: #CC0000;
+	height: 33px;
+}
+thead th:hover {
+	background: #ffffff;
+	
+}
+tr {
+	vertical-align: top;
+}
+tr,th,td {
+	padding: .75em;
+}
+td {
+	border-left: 1px solid #dadada;
+}
+tfoot tr {
+	background: #fff url(bbar.gif) repeat-x;
+}
+tfoot td, tfoot th{
+	color: #000;
+	border: 0px;
+}
+span{
+	color: #ffffff;
+}
+logos{
+	padding: 0 30% 2% 10%;
+}
