@@ -5,7 +5,7 @@
 <head>
 <title>lazystudent - study and fail</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="stylesheet" href="../../css/default.css" type="text/css" />
+<link rel="stylesheet" href="../../css/lazystudent.css" type="text/css" />
 
 <style type='text/css'>
 span {
