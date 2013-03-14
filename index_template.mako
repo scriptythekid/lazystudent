@@ -3,8 +3,9 @@
 <html>
 
 <head>
+<title>lazystudent - study and fail</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="stylesheet" href="../../css/default.css" type="text/css" />
+<link rel="stylesheet" href="../../css/lazystudent.css" type="text/css" />
 
 <style type='text/css'>
 span {
@@ -83,7 +84,9 @@ $('#filt').keyup(function() {
 
 </script>
 
-<input id='filt' name='filt' onkeyup="filter2(this, 'table')"></br>
+<input id='filt' name='filt' onkeyup="filter2(this, 'table')" value="Search..."></br>
+
+<logos><img src="../../css/lazystudent.png" width="1039" height="229" alt="lazy"></logos>
 
 <table id='table' class='sortable CSSTableGenerator'>
     <caption>lazystudent</caption>
