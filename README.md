@@ -25,7 +25,7 @@ when the scraping is done run this:
 
 e.g.:
 
-```	python parse_layoutput.py SS```
+```	python parse_lazyoutput.py SS```
 
 then open the file ```./output/SS/index.html```
 type in the search field on top to search...
