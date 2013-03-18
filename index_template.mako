@@ -82,9 +82,17 @@ $('#filt').keyup(function() {
 });
 */
 
+function clearon1stclick() {
+  elem = document.getElementById("filt");
+  if (elem.value=="Search...") {
+    elem.value = "";
+  }
+  
+}
+
 </script>
 
-<input id='filt' name='filt' onkeyup="filter2(this, 'table')" value="Search..."></br>
+<input id='filt' name='filt' onkeyup="filter2(this, 'table')" value="Search..." onclick="javascript:clearon1stclick();"></br>
 
 <logos><img src="../../css/lazystudent.png" width="1039" height="229" alt="lazy"></logos>
 
